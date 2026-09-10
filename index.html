@@ -291,6 +291,11 @@
       backdrop-filter:blur(12px);
       display:grid;place-items:center;
       font-size:.85rem;
+      transition:.25s ease;
+    }
+    .sound.audio-on{
+      border-color:rgba(216,199,178,.48);
+      box-shadow:0 0 0 5px rgba(103,19,34,.10),0 0 28px rgba(103,19,34,.32);
     }
 
     /* subtle animation */
@@ -329,7 +334,7 @@
         preload="auto"
         poster=""
       >
-        <source src="assets/video-01.mp4" type="video/mp4">
+        <source src="video-01.mp4" type="video/mp4">
       </video>
     </div>
 
@@ -361,7 +366,7 @@
       <button class="dot" data-video="2" aria-label="Video 3"></button>
     </nav>
 
-    <button class="sound" id="soundBtn" aria-label="Activar sonido">♪</button>
+    <button class="sound" id="soundBtn" aria-label="Activar ambiente italiano" title="Ambiente italiano">♪</button>
 
     <section class="content">
       <div class="eyebrow reveal">Selección · experiencia · origen</div>
@@ -406,9 +411,9 @@
 
   <script>
     const videos = [
-      "assets/video-01.mp4",
-      "assets/video-02.mp4",
-      "assets/video-03.mp4"
+      "video-01.mp4",
+      "video-02.mp4",
+      "video-03.mp4"
     ];
 
     const video = document.getElementById("bgVideo");
@@ -449,10 +454,150 @@
       dot.addEventListener("click", ()=>playVideo(i));
     });
 
+    // Ambiente musical italiano original, generado en el navegador.
+    // Los videos permanecen silenciados para que no compitan con la música.
+    let audioCtx = null;
+    let masterGain = null;
+    let musicTimer = null;
+    let ambienceOn = false;
+    let step = 0;
+
+    const italianProgression = [
+      [57, 60, 64], // Am
+      [53, 57, 60], // F
+      [55, 59, 62], // G
+      [52, 56, 59]  // E
+    ];
+
+    function midiToFreq(midi){
+      return 440 * Math.pow(2, (midi - 69) / 12);
+    }
+
+    function pluck(freq, when, gain=0.045, duration=0.42){
+      const osc = audioCtx.createOscillator();
+      const overtone = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      const filter = audioCtx.createBiquadFilter();
+
+      osc.type = "triangle";
+      overtone.type = "sine";
+      osc.frequency.setValueAtTime(freq, when);
+      overtone.frequency.setValueAtTime(freq * 2.01, when);
+
+      filter.type = "lowpass";
+      filter.frequency.setValueAtTime(1700, when);
+      filter.Q.setValueAtTime(0.7, when);
+
+      g.gain.setValueAtTime(0.0001, when);
+      g.gain.exponentialRampToValueAtTime(gain, when + 0.012);
+      g.gain.exponentialRampToValueAtTime(0.0001, when + duration);
+
+      osc.connect(filter);
+      overtone.connect(filter);
+      filter.connect(g);
+      g.connect(masterGain);
+
+      osc.start(when);
+      overtone.start(when);
+      osc.stop(when + duration + 0.05);
+      overtone.stop(when + duration + 0.05);
+    }
+
+    function warmPad(notes, when, duration=2.8){
+      notes.forEach((midi, i)=>{
+        const osc = audioCtx.createOscillator();
+        const g = audioCtx.createGain();
+        const filter = audioCtx.createBiquadFilter();
+
+        osc.type = i === 0 ? "triangle" : "sine";
+        osc.frequency.setValueAtTime(midiToFreq(midi - 12), when);
+
+        filter.type = "lowpass";
+        filter.frequency.setValueAtTime(620, when);
+
+        g.gain.setValueAtTime(0.0001, when);
+        g.gain.exponentialRampToValueAtTime(0.016, when + 0.35);
+        g.gain.exponentialRampToValueAtTime(0.0001, when + duration);
+
+        osc.connect(filter);
+        filter.connect(g);
+        g.connect(masterGain);
+        osc.start(when);
+        osc.stop(when + duration + 0.1);
+      });
+    }
+
+    function scheduleItalianPhrase(){
+      if(!ambienceOn || !audioCtx) return;
+
+      const now = audioCtx.currentTime + 0.05;
+      const chord = italianProgression[step % italianProgression.length];
+      warmPad(chord, now, 3.1);
+
+      // Mandolina/guitarra suave en 6/8, elegante y lenta.
+      const arp = [
+        chord[0] + 12,
+        chord[1] + 12,
+        chord[2] + 12,
+        chord[1] + 12,
+        chord[0] + 12,
+        chord[2] + 12
+      ];
+
+      arp.forEach((midi, i)=>{
+        pluck(midiToFreq(midi), now + i * 0.34, i % 3 === 0 ? 0.052 : 0.037, 0.38);
+      });
+
+      // Pequeña nota melódica superior para sensación cinematográfica italiana.
+      const melody = [76, 74, 72, 71][step % 4];
+      pluck(midiToFreq(melody), now + 1.72, 0.024, 0.65);
+
+      step++;
+    }
+
+    function startItalianAmbience(){
+      if(!audioCtx){
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        masterGain = audioCtx.createGain();
+        masterGain.gain.value = 0.68;
+        masterGain.connect(audioCtx.destination);
+      }
+
+      if(audioCtx.state === "suspended") audioCtx.resume();
+
+      ambienceOn = true;
+      step = 0;
+      scheduleItalianPhrase();
+      musicTimer = setInterval(scheduleItalianPhrase, 2300);
+
+      video.muted = true;
+      soundBtn.textContent = "♫";
+      soundBtn.setAttribute("aria-label", "Silenciar ambiente italiano");
+      soundBtn.title = "Ambiente italiano activo";
+      soundBtn.classList.add("audio-on");
+    }
+
+    function stopItalianAmbience(){
+      ambienceOn = false;
+      if(musicTimer){
+        clearInterval(musicTimer);
+        musicTimer = null;
+      }
+      if(masterGain && audioCtx){
+        masterGain.gain.cancelScheduledValues(audioCtx.currentTime);
+        masterGain.gain.setTargetAtTime(0.0001, audioCtx.currentTime, 0.08);
+        setTimeout(()=>{
+          if(masterGain) masterGain.gain.value = 0.68;
+        }, 350);
+      }
+      soundBtn.textContent = "♪";
+      soundBtn.setAttribute("aria-label", "Activar ambiente italiano");
+      soundBtn.title = "Ambiente italiano";
+      soundBtn.classList.remove("audio-on");
+    }
+
     soundBtn.addEventListener("click", ()=>{
-      video.muted = !video.muted;
-      soundBtn.textContent = video.muted ? "♪" : "♫";
-      soundBtn.setAttribute("aria-label", video.muted ? "Activar sonido" : "Silenciar video");
+      ambienceOn ? stopItalianAmbience() : startItalianAmbience();
     });
 
     document.addEventListener("visibilitychange", ()=>{
