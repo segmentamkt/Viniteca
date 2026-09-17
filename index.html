@@ -30,7 +30,7 @@
     .results{display:flex;align-items:center;justify-content:space-between;margin:24px 2px 14px;color:var(--muted);font-size:.78rem}.clear{border:0;background:transparent;color:var(--wine2);font-weight:700}
     .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{position:relative;display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid rgba(103,19,34,.09);border-radius:24px;background:#fff;box-shadow:0 12px 36px rgba(58,18,25,.06);transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 18px 50px rgba(63,16,25,.12)}
     .media{aspect-ratio:4/5;background:linear-gradient(145deg,#f6efe7,#ece0d3);display:grid;place-items:center;overflow:hidden}.media img{width:100%;height:100%;object-fit:contain;padding:16px}.placeholder{width:46px;height:178px;border-radius:18px 18px 12px 12px;background:linear-gradient(180deg,#2e241f,#15100e);opacity:.23;position:relative}.placeholder:before{content:"";position:absolute;width:20px;height:56px;left:50%;top:-44px;transform:translateX(-50%);background:#1c1512;border-radius:5px 5px 0 0}
-    .status{position:absolute;top:12px;left:12px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.92);font-size:.62rem;font-weight:800;color:var(--wine)}.status.out{background:#2f2a28;color:#fff}.body{display:flex;flex:1;flex-direction:column;padding:16px}.meta{font-size:.61rem;letter-spacing:.12em;text-transform:uppercase;color:var(--wine2);font-weight:800}.card h3{font-family:"Marcellus",serif;font-size:1.15rem;font-weight:400;line-height:1.16;margin:7px 0 9px}.details{display:grid;gap:4px;color:var(--muted);font-size:.72rem;line-height:1.4}.actions{display:flex;gap:8px;margin-top:auto;padding-top:15px}.actions button,.actions a{flex:1;min-height:40px;border-radius:12px;display:grid;place-items:center;font-size:.72rem;font-weight:800}.view{border:1px solid var(--line);background:#fff;color:var(--wine)}.wa{border:0;background:var(--wine);color:#fff}.disabled{opacity:.42;pointer-events:none}
+    .status{position:absolute;top:12px;left:12px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.92);font-size:.62rem;font-weight:800;color:var(--wine)}.status.out{background:#2f2a28;color:#fff}.body{display:flex;flex:1;flex-direction:column;padding:16px}.meta{font-size:.61rem;letter-spacing:.12em;text-transform:uppercase;color:var(--wine2);font-weight:800}.card h3{font-family:"Marcellus",serif;font-size:1.15rem;font-weight:400;line-height:1.16;margin:7px 0 9px}.price{margin:1px 0 9px;color:var(--wine);font-size:1rem;font-weight:800}.details{display:grid;gap:4px;color:var(--muted);font-size:.72rem;line-height:1.4}.actions{display:flex;gap:8px;margin-top:auto;padding-top:15px}.actions button,.actions a{flex:1;min-height:40px;border-radius:12px;display:grid;place-items:center;font-size:.72rem;font-weight:800}.view{border:1px solid var(--line);background:#fff;color:var(--wine)}.wa{border:0;background:var(--wine);color:#fff}.disabled{opacity:.42;pointer-events:none}
     .empty{grid-column:1/-1;padding:50px 22px;text-align:center;border:1px dashed rgba(103,19,34,.22);border-radius:26px;background:rgba(255,255,255,.46)}.empty strong{display:block;margin-bottom:8px;font-family:"Marcellus",serif;font-size:1.5rem;font-weight:400}.empty span{display:block;max-width:590px;margin:auto;color:var(--muted);font-size:.86rem;line-height:1.55}
     .backdrop{position:fixed;inset:0;z-index:70;background:rgba(17,8,9,.56);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:.2s}.backdrop.open{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;z-index:71;width:min(620px,100%);max-height:88vh;overflow:auto;transform:translate(-50%,105%);background:var(--paper);border-radius:28px 28px 0 0;box-shadow:0 -20px 60px rgba(0,0,0,.22);transition:.28s}.sheet.open{transform:translate(-50%,0)}.handle{width:46px;height:4px;border-radius:99px;background:#cbbdb6;margin:10px auto 2px}.sheet-content{padding:18px 22px calc(var(--safe-bottom) + 24px)}.close{float:right;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff}.sheet-media{clear:both;aspect-ratio:16/10;border-radius:20px;background:linear-gradient(145deg,#f6efe7,#ece0d3);display:grid;place-items:center;overflow:hidden;margin:10px 0 18px}.sheet-media img{width:100%;height:100%;object-fit:contain;padding:18px}.sheet h3{margin:7px 0 13px;font-family:"Marcellus",serif;font-size:2rem;font-weight:400;line-height:1.05}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fact{padding:12px;border:1px solid rgba(103,19,34,.08);border-radius:14px;background:#fff}.fact b{display:block;margin-bottom:4px;color:var(--muted);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase}.fact span{font-size:.8rem}.sheet-wa{width:100%;min-height:50px;margin-top:16px;border:0;border-radius:14px;background:var(--wine);color:#fff;font-weight:800}
     .mira-launch{position:fixed;right:18px;bottom:calc(var(--safe-bottom) + 12px);z-index:90;width:66px;height:66px;border:0;border-radius:50%;background:radial-gradient(circle at 35% 28%,#bc4a5c,var(--wine2) 42%,#4e0d18 100%);color:#fff;box-shadow:0 16px 42px rgba(103,19,34,.38);display:grid;place-items:center}.mira-launch:before{content:"M";font-family:"Marcellus",serif;font-size:1.9rem}.mira-launch:after{content:"Mira";position:absolute;right:58px;bottom:9px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--wine);font-size:.69rem;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.08)}
@@ -66,7 +66,7 @@
       <div class="kicker">Catálogo La Viniteca</div>
       <div class="head">
         <h2>Una selección para cada ocasión.</h2>
-        <p>Busca por nombre o filtra la selección. La información de producto se carga desde una única fuente controlada para evitar referencias inexistentes.</p>
+        <p>Explora la selección de La Viniteca, revisa precios de referencia y consulta disponibilidad directamente por WhatsApp.</p>
       </div>
       <div class="toolbar">
         <div class="search-row">
@@ -99,12 +99,13 @@
   <script>
     var WA="51989039871";
     var catalog=Array.isArray(window.VINITECA_CATALOG)?window.VINITECA_CATALOG:[];
-    var categories=["Todos","Tintos","Blancos","Rosados","Espumantes","Frizzantes","Licores/Destilados"];
+    var categoryOrder=["Tintos","Blancos","Rosados","Espumantes","Frizzantes","Licores/Destilados"];var categories=["Todos"].concat(categoryOrder.filter(function(cat){return catalog.some(function(p){return norm(p.category)===norm(cat)})}));
     var state={category:"Todos",search:"",country:"",winery:"",grape:""};
     function q(s){return document.querySelector(s)}
     function norm(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim()}
     function esc(v){return String(v||"").replace(/[&<>'"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]})}
     function out(p){return norm(p.status)==="agotado"}
+    function money(p){return p.price!==null&&p.price!==undefined&&p.price!==""?new Intl.NumberFormat("es-PE",{style:"currency",currency:p.currency||"PEN",minimumFractionDigits:0,maximumFractionDigits:0}).format(Number(p.price)):"Consultar precio"}
     function joined(){return Array.prototype.slice.call(arguments).filter(Boolean).join(" · ")}
     function uniques(field){return Array.from(new Set(catalog.map(function(p){return p[field]}).filter(Boolean))).sort(function(a,b){return String(a).localeCompare(String(b),"es")})}
 
@@ -130,7 +131,7 @@
       var image=p.image?'<img src="'+esc(p.image)+'" alt="'+esc(p.name)+'" loading="lazy">':'<div class="placeholder" aria-hidden="true"></div>';
       var line1=joined(p.winery,p.country),line2=joined(p.grape,p.region,p.vintage);
       var text=encodeURIComponent("Hola La Viniteca, quisiera consultar por "+p.name+".");
-      return '<article class="card"><div class="media">'+image+'</div><span class="status '+(out(p)?'out':'')+'">'+(out(p)?'Agotado':'Disponible')+'</span><div class="body"><div class="meta">'+esc(p.category)+'</div><h3>'+esc(p.name)+'</h3><div class="details">'+(line1?'<span>'+esc(line1)+'</span>':'')+(line2?'<span>'+esc(line2)+'</span>':'')+'</div><div class="actions"><button class="view" data-view="'+esc(p.id)+'" type="button">Ver detalle</button><a class="wa '+(out(p)?'disabled':'')+'" href="https://wa.me/'+WA+'?text='+text+'" target="_blank" rel="noopener noreferrer">Consultar</a></div></div></article>'
+      return '<article class="card"><div class="media">'+image+'</div><span class="status '+(out(p)?'out':'')+'">'+esc(p.status||(out(p)?'Agotado':'Consultar disponibilidad'))+'</span><div class="body"><div class="meta">'+esc(p.category)+'</div><h3>'+esc(p.name)+'</h3><div class="price">'+esc(money(p))+'</div><div class="details">'+(line1?'<span>'+esc(line1)+'</span>':'')+(line2?'<span>'+esc(line2)+'</span>':'')+'</div><div class="actions"><button class="view" data-view="'+esc(p.id)+'" type="button">Ver detalle</button><a class="wa '+(out(p)?'disabled':'')+'" href="https://wa.me/'+WA+'?text='+text+'" target="_blank" rel="noopener noreferrer">Consultar</a></div></div></article>'
     }
     function render(){
       var list=filtered();
@@ -146,7 +147,7 @@
       var p=catalog.find(function(x){return String(x.id)===String(id)});if(!p)return;
       var image=p.image?'<img src="'+esc(p.image)+'" alt="'+esc(p.name)+'">':'<div class="placeholder" aria-hidden="true"></div>';
       var text=encodeURIComponent("Hola La Viniteca, quisiera consultar por "+p.name+".");
-      q("#sheetContent").innerHTML='<button class="close" id="closeSheet" aria-label="Cerrar">×</button><div class="sheet-media">'+image+'</div><div class="meta">'+esc(p.category)+'</div><h3>'+esc(p.name)+'</h3><div class="facts">'+fact("Bodega",p.winery)+fact("Cepa",p.grape)+fact("Región",p.region)+fact("País",p.country)+fact("Añada",p.vintage)+fact("Estado",p.status||"Disponible")+'</div><button class="sheet-wa" id="sheetWa" '+(out(p)?'disabled':'')+'>'+(out(p)?'Producto agotado':'Consultar por WhatsApp')+'</button>';
+      q("#sheetContent").innerHTML='<button class="close" id="closeSheet" aria-label="Cerrar">×</button><div class="sheet-media">'+image+'</div><div class="meta">'+esc(p.category)+'</div><h3>'+esc(p.name)+'</h3><div class="price">'+esc(money(p))+'</div><div class="facts">'+fact("Cepa",p.grape)+fact("Añada",p.vintage)+fact("Estado",p.status||"Consultar disponibilidad")+'</div><button class="sheet-wa" id="sheetWa" '+(out(p)?'disabled':'')+'>'+(out(p)?'Producto agotado':'Consultar por WhatsApp')+'</button>';
       q("#backdrop").classList.add("open");q("#sheet").classList.add("open");q("#sheet").setAttribute("aria-hidden","false");
       q("#closeSheet").addEventListener("click",closeProduct);
       q("#sheetWa").addEventListener("click",function(){if(!out(p))window.open("https://wa.me/"+WA+"?text="+text,"_blank")})
@@ -163,7 +164,7 @@
     function bot(text,products){
       products=products||[];
       var b=document.createElement("div");b.className="bubble bot";b.innerHTML=esc(text).replace(/\n/g,"<br>");
-      products.forEach(function(p){var x=document.createElement("button");x.type="button";x.className="mira-product";x.innerHTML="<b>"+esc(p.name)+"</b><small>"+esc(joined(p.category,p.country,p.grape))+"</small>";x.addEventListener("click",function(){openProduct(p.id)});b.appendChild(x)});
+      products.forEach(function(p){var x=document.createElement("button");x.type="button";x.className="mira-product";x.innerHTML="<b>"+esc(p.name)+"</b><small>"+esc(joined(p.category,p.grape,money(p)))+"</small>";x.addEventListener("click",function(){openProduct(p.id)});b.appendChild(x)});
       messages.appendChild(b);messages.scrollTop=messages.scrollHeight
     }
     function user(text){var b=document.createElement("div");b.className="bubble user";b.textContent=text;messages.appendChild(b);messages.scrollTop=messages.scrollHeight}
