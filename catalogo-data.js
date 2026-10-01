@@ -2,8 +2,8 @@
   LA VINITECA — CATÁLOGO BASE
   Fuente: catálogo de La Viniteca cargado por el usuario.
   - Producto Demo excluido.
-  - Precios dudosos se dejan sin valor para consulta.
-  - El stock se confirma por WhatsApp.
+  - No se publican precios en la web.
+  - Disponibilidad y detalles se consultan por WhatsApp.
 */
 window.VINITECA_CATALOG = [
   {
@@ -17,8 +17,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2016",
     "image": "",
-    "price": 532,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -32,8 +30,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 308,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -47,8 +43,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2014",
     "image": "",
-    "price": 363,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -62,8 +56,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "",
     "image": "",
-    "price": 177,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -77,8 +69,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2005",
     "image": "",
-    "price": 1487,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -92,8 +82,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2009",
     "image": "",
-    "price": 395,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -107,8 +95,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2013",
     "image": "",
-    "price": 444,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -122,8 +108,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2016",
     "image": "",
-    "price": 307,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -137,8 +121,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 113,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -152,8 +134,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2006",
     "image": "",
-    "price": 2320,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -167,8 +147,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2011",
     "image": "",
-    "price": 612,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -182,8 +160,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2019",
     "image": "",
-    "price": 146,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -197,8 +173,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "price": 164,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -212,8 +186,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 427,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -227,8 +199,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 214,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -242,8 +212,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2011",
     "image": "",
-    "price": 259,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -257,8 +225,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2016",
     "image": "",
-    "price": 307,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -272,8 +238,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 307,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -287,8 +251,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2015",
     "image": "",
-    "price": 146,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -302,8 +264,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "",
     "image": "",
-    "price": 65,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -317,8 +277,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 615,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -332,8 +290,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2016",
     "image": "",
-    "price": 205,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -347,8 +303,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 60,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -362,8 +316,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 70,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -377,8 +329,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 72,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -392,8 +342,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2023",
     "image": "",
-    "price": 56,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -407,8 +355,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2024",
     "image": "",
-    "price": 35,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -422,8 +368,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2016",
     "image": "",
-    "price": 294,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -437,8 +381,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2015",
     "image": "",
-    "price": 274,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -452,8 +394,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "1999",
     "image": "",
-    "price": 6500,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -467,8 +407,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2010",
     "image": "",
-    "price": null,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -482,8 +420,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2011",
     "image": "",
-    "price": 1487,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -497,8 +433,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2011",
     "image": "",
-    "price": null,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -512,8 +446,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2007",
     "image": "",
-    "price": 1419,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -527,8 +459,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2011",
     "image": "",
-    "price": 1845,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -542,8 +472,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2009",
     "image": "",
-    "price": 499,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -557,8 +485,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2010",
     "image": "",
-    "price": 1795,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -572,8 +498,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2013",
     "image": "",
-    "price": 133,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -587,8 +511,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 131,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -602,8 +524,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 208,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -617,8 +537,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2018",
     "image": "",
-    "price": 440,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -632,8 +550,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2013",
     "image": "",
-    "price": 114,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -647,8 +563,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2019",
     "image": "",
-    "price": 284,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -662,8 +576,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 69,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -677,8 +589,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2023",
     "image": "",
-    "price": 69,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -692,8 +602,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "price": 99,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -707,8 +615,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 99,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -722,8 +628,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2024",
     "image": "",
-    "price": 69,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -737,8 +641,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2023",
     "image": "",
-    "price": 99,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -752,8 +654,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "",
     "image": "",
-    "price": 229,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -767,8 +667,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 123,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -782,8 +680,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "price": 69,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -797,8 +693,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "price": 44,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -812,8 +706,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 44,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -827,8 +719,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "price": 51,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -842,8 +732,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "price": 108,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -857,8 +745,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2020",
     "image": "",
-    "price": 223,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -872,8 +758,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 308,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -887,8 +771,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2016",
     "image": "",
-    "price": 598,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -902,8 +784,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2016",
     "image": "",
-    "price": 96,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -917,8 +797,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2018",
     "image": "",
-    "price": 135,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -932,8 +810,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2015",
     "image": "",
-    "price": 164,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -947,8 +823,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 110,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -962,8 +836,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2024",
     "image": "",
-    "price": 114,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -977,8 +849,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2016",
     "image": "",
-    "price": 104,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -992,8 +862,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2015",
     "image": "",
-    "price": 194,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1007,8 +875,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2015",
     "image": "",
-    "price": 186,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1022,8 +888,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2013",
     "image": "",
-    "price": 242,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1037,8 +901,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2013",
     "image": "",
-    "price": 586,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1052,8 +914,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 147,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1067,8 +927,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2012",
     "image": "",
-    "price": 157,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1082,8 +940,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2013",
     "image": "",
-    "price": 259,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1097,8 +953,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2011",
     "image": "",
-    "price": 259,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1112,8 +966,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "price": 133,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1127,8 +979,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "price": 87,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1142,8 +992,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 54,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1157,8 +1005,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 63,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1172,8 +1018,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 85,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1187,8 +1031,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 43,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1202,8 +1044,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 43,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1217,8 +1057,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 43,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1232,8 +1070,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 108,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1247,8 +1083,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2019",
     "image": "",
-    "price": 223,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   },
   {
@@ -1262,8 +1096,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "price": 150,
-    "currency": "PEN",
     "status": "Consultar disponibilidad"
   }
 ];
