@@ -26,7 +26,7 @@ export default async function handler(req, res) {
         output_format: "JSON"
       }),
       getJSON("/categories", {
-        display: "[id,name,id_parent,active]",
+        display: "[id,name,link_rewrite,id_parent,active]",
         limit: "0,1000",
         output_format: "JSON"
       }),
@@ -55,7 +55,7 @@ export default async function handler(req, res) {
     const categories = new Map(
       (Array.isArray(catData.categories) ? catData.categories : []).map(c => [
         String(c.id),
-        { name: cleanLang(c.name), parent: String(c.id_parent || "") }
+        { name: cleanLang(c.name), slug: cleanLang(c.link_rewrite), parent: String(c.id_parent || "") }
       ])
     );
     const featureNames = new Map(
@@ -123,6 +123,18 @@ export default async function handler(req, res) {
           : "";
         const category = categories.get(String(p.id_category_default))?.name || "Otros";
         const numericPrice = Number.parseFloat(String(p.price || "0")) || 0;
+        const productSlug = cleanLang(p.link_rewrite);
+        const categoryData = categories.get(String(p.id_category_default));
+        const categorySlug = categoryData?.slug || "";
+        const shopOrigin = new URL(baseUrl).origin;
+        const productUrl = productSlug
+          ? shopOrigin + "/" + (categorySlug ? encodeURIComponent(categorySlug) + "/" : "") + p.id + "-" + encodeURIComponent(productSlug) + ".html"
+          : shopOrigin + "/index.php?controller=product&id_product=" + encodeURIComponent(p.id);
+        const combinations = p.associations && Array.isArray(p.associations.combinations) ? p.associations.combinations : [];
+        const hasCombinations = combinations.length > 0;
+        const addToCartUrl = hasCombinations
+          ? productUrl
+          : shopOrigin + "/index.php?controller=cart&add=1&id_product=" + encodeURIComponent(p.id) + "&qty=1";
         return {
           id: "ps-" + p.id,
           sourceId: Number(p.id),
@@ -137,6 +149,9 @@ export default async function handler(req, res) {
           price: numericPrice,
           currency: "PEN",
           image: imageId ? "/api/prestashop-image?product=" + encodeURIComponent(p.id) + "&image=" + encodeURIComponent(imageId) : "",
+          productUrl,
+          addToCartUrl,
+          hasCombinations,
           status: "Consultar disponibilidad"
         };
       });
