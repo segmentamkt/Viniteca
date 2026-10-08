@@ -22,6 +22,12 @@
     h1{margin:0;font-family:"Marcellus",serif;font-weight:400;font-size:clamp(3.15rem,9vw,6.5rem);line-height:.91;letter-spacing:-.04em;text-wrap:balance;text-shadow:0 12px 42px rgba(0,0,0,.44)}h1 em{font-style:normal;color:var(--cream2)}
     .hero-copy p{max-width:560px;margin:18px 0 24px;color:rgba(243,234,223,.76);line-height:1.62}.ctas{display:flex;flex-wrap:wrap;gap:10px}.btn{min-height:52px;padding:0 19px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:.84rem;font-weight:700}.primary{background:linear-gradient(180deg,var(--wine2),var(--wine));box-shadow:0 14px 34px rgba(103,19,34,.35)}.ghost{border:1px solid rgba(243,234,223,.22);background:rgba(9,7,6,.34);backdrop-filter:blur(13px)}
     .video-nav{position:absolute;right:18px;top:50%;transform:translateY(-50%);display:grid;gap:8px}.dot{width:7px;height:7px;border:0;padding:0;border-radius:50%;background:rgba(243,234,223,.3)}.dot.active{height:28px;border-radius:999px;background:linear-gradient(180deg,var(--cream2),var(--wine2))}
+    .purchase-paths{padding:32px 0 0;background:linear-gradient(180deg,#11090b 0%,var(--paper) 100%)}
+    .path-wrap{width:min(1180px,calc(100% - 32px));margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .path-card{min-width:0;padding:18px 20px;border-radius:22px;border:1px solid rgba(103,19,34,.12);background:rgba(255,255,255,.92);box-shadow:0 12px 34px rgba(55,16,23,.08);display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .path-card.dark{background:linear-gradient(135deg,#2a0d13,#5c1321);color:#fff;border-color:rgba(255,255,255,.08)}
+    .path-copy{min-width:0}.path-copy small{display:block;margin-bottom:5px;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--wine2)}.path-card.dark .path-copy small{color:#dcb9bf}.path-copy b{display:block;font-family:"Marcellus",serif;font-size:1.22rem;font-weight:400}.path-copy span{display:block;margin-top:5px;color:var(--muted);font-size:.72rem;line-height:1.45}.path-card.dark .path-copy span{color:rgba(255,255,255,.68)}
+    .path-cta{flex:0 0 auto;min-height:42px;padding:0 14px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;white-space:nowrap}.path-cta.shop-link{background:#1d1715;color:#fff}.path-cta.sira-link{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.1);color:#fff}
     .catalog{padding:70px 0 100px}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.kicker{color:var(--wine2);font-size:.67rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700}.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin:9px 0 28px}.head h2{margin:0;font-family:"Marcellus",serif;font-size:clamp(2.25rem,6vw,4.2rem);font-weight:400;line-height:1}.head p{max-width:460px;margin:0;color:var(--muted);font-size:.9rem;line-height:1.55}
     .toolbar{position:sticky;top:10px;z-index:20;padding:14px;border:1px solid rgba(103,19,34,.1);border-radius:24px;background:rgba(247,242,235,.94);backdrop-filter:blur(18px);box-shadow:0 14px 42px rgba(60,20,25,.07)}
     .search-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}.search{position:relative}.search input{width:100%;height:50px;border:1px solid var(--line);border-radius:16px;background:#fff;padding:0 44px 0 16px;outline:none}.search input:focus{border-color:rgba(103,19,34,.42);box-shadow:0 0 0 4px rgba(103,19,34,.07)}.search span{position:absolute;right:16px;top:50%;transform:translateY(-50%);opacity:.55}.filter-btn{display:none;height:50px;border:1px solid var(--line);border-radius:16px;background:#fff;color:var(--wine);padding:0 16px;font-weight:700}
@@ -37,7 +43,7 @@
     .results{display:flex;align-items:center;justify-content:space-between;margin:24px 2px 14px;color:var(--muted);font-size:.78rem}.clear{border:0;background:transparent;color:var(--wine2);font-weight:700}
     .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{position:relative;display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid rgba(103,19,34,.09);border-radius:24px;background:#fff;box-shadow:0 12px 36px rgba(58,18,25,.06);transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 18px 50px rgba(63,16,25,.12)}
     .media{aspect-ratio:4/5;background:linear-gradient(145deg,#f6efe7,#ece0d3);display:grid;place-items:center;overflow:hidden}.media img{width:100%;height:100%;object-fit:contain;padding:16px}.placeholder{width:46px;height:178px;border-radius:18px 18px 12px 12px;background:linear-gradient(180deg,#2e241f,#15100e);opacity:.23;position:relative}.placeholder:before{content:"";position:absolute;width:20px;height:56px;left:50%;top:-44px;transform:translateX(-50%);background:#1c1512;border-radius:5px 5px 0 0}
-    .status{position:absolute;top:12px;left:12px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.92);font-size:.62rem;font-weight:800;color:var(--wine)}.status.out{background:#2f2a28;color:#fff}.body{display:flex;flex:1;flex-direction:column;padding:16px}.meta{font-size:.61rem;letter-spacing:.12em;text-transform:uppercase;color:var(--wine2);font-weight:800}.card h3{font-family:"Marcellus",serif;font-size:1.15rem;font-weight:400;line-height:1.16;margin:7px 0 9px}.price{margin:1px 0 9px;color:var(--wine);font-size:1rem;font-weight:800}.details{display:grid;gap:4px;color:var(--muted);font-size:.72rem;line-height:1.4}.actions{display:flex;gap:8px;margin-top:auto;padding-top:15px}.actions button,.actions a{flex:1;min-height:40px;border-radius:12px;display:grid;place-items:center;font-size:.72rem;font-weight:800}.view{border:1px solid var(--line);background:#fff;color:var(--wine)}.wa{border:1px solid rgba(255,255,255,.12);background:linear-gradient(135deg,#861d31 0%,#64101f 62%,#4c0b16 100%);color:#fff;display:flex!important;align-items:center;justify-content:center;gap:8px;min-height:44px!important;box-shadow:0 10px 24px rgba(103,19,34,.2);position:relative;overflow:hidden;transition:.2s}
+    .status{position:absolute;top:12px;left:12px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.92);font-size:.62rem;font-weight:800;color:var(--wine)}.status.out{background:#2f2a28;color:#fff}.body{display:flex;flex:1;flex-direction:column;padding:16px}.meta{font-size:.61rem;letter-spacing:.12em;text-transform:uppercase;color:var(--wine2);font-weight:800}.card h3{font-family:"Marcellus",serif;font-size:1.15rem;font-weight:400;line-height:1.16;margin:7px 0 9px}.price{margin:1px 0 9px;color:var(--wine);font-size:1rem;font-weight:800}.details{display:grid;gap:4px;color:var(--muted);font-size:.72rem;line-height:1.4}.actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:auto;padding-top:15px}.actions button,.actions a{width:100%;min-height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:.71rem;font-weight:800}.view{border:1px solid var(--line);background:#fff;color:var(--wine)}.shop{border:1px solid #1d1715;background:#1d1715;color:var(--cream);box-shadow:0 8px 18px rgba(29,23,21,.14);transition:.2s}.shop:after{content:"↗";margin-left:7px;font-size:.8rem}.shop:hover{transform:translateY(-1px);background:#2b2220}.wa{border:1px solid rgba(255,255,255,.12);background:linear-gradient(135deg,#861d31 0%,#64101f 62%,#4c0b16 100%);color:#fff;display:flex!important;align-items:center;justify-content:center;gap:8px;min-height:44px!important;box-shadow:0 10px 24px rgba(103,19,34,.2);position:relative;overflow:hidden;transition:.2s}
     .wa:before{content:"";width:7px;height:7px;border-radius:50%;background:#35d875;box-shadow:0 0 0 4px rgba(53,216,117,.12)}
     .card:hover .wa{transform:translateY(-1px);box-shadow:0 14px 30px rgba(103,19,34,.28);background:linear-gradient(135deg,#93233a 0%,#6d1324 62%,#520d19 100%)}.disabled{opacity:.42;pointer-events:none}
     .empty{grid-column:1/-1;padding:50px 22px;text-align:center;border:1px dashed rgba(103,19,34,.22);border-radius:26px;background:rgba(255,255,255,.46)}.empty strong{display:block;margin-bottom:8px;font-family:"Marcellus",serif;font-size:1.5rem;font-weight:400}.empty span{display:block;max-width:590px;margin:auto;color:var(--muted);font-size:.86rem;line-height:1.55}
@@ -45,7 +51,7 @@
     .mira-launch{position:fixed;right:18px;bottom:calc(var(--safe-bottom) + 12px);z-index:90;width:66px;height:66px;border:1px solid rgba(255,255,255,.14);border-radius:50%;background:radial-gradient(circle at 35% 28%,#bc4a5c,var(--wine2) 42%,#4e0d18 100%);color:#fff;box-shadow:0 16px 42px rgba(103,19,34,.38);display:grid;place-items:center}.mira-launch:before{content:"S";font-family:"Marcellus",serif;font-size:1.9rem}.mira-launch:after{content:"SIRA";position:absolute;right:58px;bottom:9px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--wine);font-size:.69rem;letter-spacing:.08em;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.08)}
     .mira{position:fixed;right:16px;bottom:calc(var(--safe-bottom) + 88px);z-index:89;width:min(390px,calc(100% - 32px));height:min(620px,calc(100dvh - 120px));overflow:hidden;border-radius:26px;background:#fff;box-shadow:0 26px 80px rgba(36,9,14,.28);display:flex;flex-direction:column;transform:translateY(18px) scale(.96);opacity:0;pointer-events:none;transition:.2s}.mira.open{transform:none;opacity:1;pointer-events:auto}.mira-head{padding:16px 17px;background:linear-gradient(135deg,#4b0d17,var(--wine2));color:#fff;display:flex;align-items:center;justify-content:space-between}.mira-title{display:flex;align-items:center;gap:10px}.avatar{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;font-family:"Marcellus",serif;font-size:1.25rem}.mira-head b{display:block;font-size:.84rem}.mira-head small{display:block;margin-top:2px;opacity:.72;font-size:.64rem}.mira-close{width:34px;height:34px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff}.messages{flex:1;overflow:auto;padding:16px;background:#faf7f3;display:flex;flex-direction:column;gap:10px}.bubble{max-width:86%;padding:10px 12px;border-radius:16px;font-size:.77rem;line-height:1.45}.bot{align-self:flex-start;background:#fff;border:1px solid rgba(103,19,34,.08);border-bottom-left-radius:5px}.user{align-self:flex-end;background:var(--wine);color:#fff;border-bottom-right-radius:5px}.quick{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}.quick button{border:1px solid var(--line);background:#fff;color:var(--wine);border-radius:999px;padding:7px 9px;font-size:.67rem;font-weight:700}.mira-product{display:block;width:100%;margin-top:7px;padding:10px;text-align:left;border:1px solid rgba(103,19,34,.1);border-radius:14px;background:#fff;color:var(--ink)}.mira-product b{display:block;font-family:"Marcellus",serif;font-size:.9rem;font-weight:400}.mira-product small{display:block;margin-top:3px;color:var(--muted);font-size:.63rem}.mira-product .sira-price{margin-top:5px;color:var(--wine);font-size:.72rem;font-weight:800}.sira-p-actions{display:flex;gap:6px;margin-top:8px}.sira-p-actions button{flex:1;min-height:34px;border-radius:10px;font-size:.66rem;font-weight:800}.sira-add{border:0;background:var(--wine);color:#fff}.sira-view{border:1px solid var(--line);background:#fff;color:var(--wine)}
     .order-dock{display:none;padding:10px 11px;border-top:1px solid rgba(103,19,34,.08);background:#fff}.order-dock.show{display:block}.order-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.order-top b{font-size:.73rem}.order-total{font-family:"Marcellus",serif;color:var(--wine);font-size:.94rem}.order-actions{display:grid;grid-template-columns:1fr 1.3fr;gap:7px;margin-top:8px}.order-actions button{min-height:38px;border-radius:11px;font-size:.67rem;font-weight:800}.order-view{border:1px solid var(--line);background:#fff;color:var(--wine)}.order-send{border:0;background:linear-gradient(135deg,#861d31,#560d1a);color:#fff}.order-line{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:7px;padding:8px;border-radius:11px;background:#faf7f3}.order-line span{min-width:0;font-size:.67rem}.qty{display:flex;align-items:center;gap:5px}.qty button{width:27px;height:27px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--wine);font-weight:800}.mira-form{padding:10px;border-top:1px solid rgba(103,19,34,.08);display:grid;grid-template-columns:1fr 42px;gap:8px}.mira-form input{height:42px;border:1px solid var(--line);border-radius:13px;padding:0 12px;outline:none}.send{border:0;border-radius:13px;background:var(--wine);color:#fff;font-weight:800}
-    @media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.head{align-items:start;flex-direction:column}.filter-btn{display:block}.filters{display:none;grid-template-columns:1fr}.filters.open{display:grid}}
+    @media(max-width:900px){.path-wrap{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.head{align-items:start;flex-direction:column}.filter-btn{display:block}.filters{display:none;grid-template-columns:1fr}.filters.open{display:grid}}
     @media(max-width:560px){.hero-inner{width:calc(100% - 36px)}.ig span{display:none}.catalog{padding-top:56px}.wrap{width:calc(100% - 24px)}.grid{gap:10px}.card{border-radius:19px}.body{padding:12px}.card h3{font-size:1rem}.details{font-size:.66rem}.actions{flex-direction:column}.filter-btn{width:48px;padding:0;font-size:0}.filter-btn:before{content:"☷";font-size:1.1rem}.mira-launch{width:60px;height:60px}.mira-launch:after{display:none}.facts{grid-template-columns:1fr}}
   </style>
 </head>
@@ -71,12 +77,25 @@
     <nav class="video-nav" aria-label="Cambiar video"><button class="dot active" data-video="0" aria-label="Video 1"></button><button class="dot" data-video="1" aria-label="Video 2"></button><button class="dot" data-video="2" aria-label="Video 3"></button></nav>
   </section>
 
+  <section class="purchase-paths" aria-label="Formas de compra">
+    <div class="path-wrap">
+      <div class="path-card">
+        <div class="path-copy"><small>Compra directa</small><b>Paga online en PrestaShop</b><span>Elige tu producto y continúa a la tienda para completar el pago.</span></div>
+        <a class="path-cta shop-link" href="#catalogo">Ver productos</a>
+      </div>
+      <div class="path-card dark">
+        <div class="path-copy"><small>Compra asistida</small><b>Arma tu pedido con SIRA</b><span>Recibe recomendaciones, combina productos y envía el pedido por WhatsApp.</span></div>
+        <button class="path-cta sira-link" id="siraPath" type="button">Abrir SIRA</button>
+      </div>
+    </div>
+  </section>
+
   <main class="catalog" id="catalogo">
     <div class="wrap">
       <div class="kicker">Catálogo La Viniteca</div>
       <div class="head">
         <h2>Una selección para cada ocasión.</h2>
-        <p>Explora el catálogo publicado de La Viniteca y consulta disponibilidad o detalles directamente por WhatsApp.</p>
+        <p>Explora el catálogo y elige cómo terminar tu compra: pago online en la tienda o pedido asistido por WhatsApp.</p>
       </div>
       <div class="toolbar">
         <div class="search-row">
@@ -210,7 +229,8 @@
     function card(p){
       var image=productVisual(p);
       var line1=joined(p.winery,p.country),line2=joined(p.grape,p.region,p.vintage);
-      return '<a class="card" href="'+waUrl(p)+'" target="_blank" rel="noopener noreferrer" aria-label="Consultar '+esc(p.name)+' por WhatsApp"><div class="media">'+image+'</div><span class="status '+(out(p)?'out':'')+'">'+esc(p.status||(out(p)?'Agotado':'Consultar disponibilidad'))+'</span><div class="body"><div class="meta">'+esc(p.category)+'</div><h3>'+esc(p.name)+'</h3><div class="price">'+esc(money(p.price))+'</div><div class="details">'+(line1?'<span>'+esc(line1)+'</span>':'')+(line2?'<span>'+esc(line2)+'</span>':'')+'</div><div class="actions"><span class="wa">Consultar por WhatsApp</span></div></div></a>'
+      var online=p.addToCartUrl||p.productUrl||"https://viniteca.com.pe/";
+      return '<article class="card"><a class="media" href="'+esc(p.productUrl||online)+'" target="_blank" rel="noopener noreferrer">'+image+'</a><span class="status '+(out(p)?'out':'')+'">'+esc(p.status||(out(p)?'Agotado':'Consultar disponibilidad'))+'</span><div class="body"><div class="meta">'+esc(p.category)+'</div><h3>'+esc(p.name)+'</h3><div class="price">'+esc(money(p.price))+'</div><div class="details">'+(line1?'<span>'+esc(line1)+'</span>':'')+(line2?'<span>'+esc(line2)+'</span>':'')+'</div><div class="actions"><a class="shop" href="'+esc(online)+'" target="_blank" rel="noopener noreferrer">Comprar online</a><a class="wa" href="'+waUrl(p)+'" target="_blank" rel="noopener noreferrer">Pedir por WhatsApp</a></div></div></article>'
     }
     function render(){
       var list=filtered();
@@ -251,9 +271,9 @@
       var b=document.createElement("div");b.className="bubble bot";b.innerHTML=esc(text).replace(/\n/g,"<br>");
       products.forEach(function(p){
         var card=document.createElement("div");card.className="mira-product";
-        card.innerHTML="<b>"+esc(p.name)+"</b><small>"+esc(joined(p.category,p.country,p.reference))+"</small><div class=\"sira-price\">"+esc(money(p.price))+"</div><div class=\"sira-p-actions\"><button class=\"sira-add\" type=\"button\">Agregar al pedido</button><button class=\"sira-view\" type=\"button\">Consultar</button></div>";
+        card.innerHTML="<b>"+esc(p.name)+"</b><small>"+esc(joined(p.category,p.country,p.reference))+"</small><div class=\"sira-price\">"+esc(money(p.price))+"</div><div class=\"sira-p-actions\"><button class=\"sira-add\" type=\"button\">Agregar al pedido</button><button class=\"sira-view\" type=\"button\">Comprar online</button></div>";
         card.querySelector(".sira-add").addEventListener("click",function(){addToOrder(p)});
-        card.querySelector(".sira-view").addEventListener("click",function(){window.open(waUrl(p),"_blank")});
+        card.querySelector(".sira-view").addEventListener("click",function(){window.open(p.addToCartUrl||p.productUrl||"https://viniteca.com.pe/","_blank")});
         b.appendChild(card);
       });
       messages.appendChild(b);messages.scrollTop=messages.scrollHeight
@@ -281,10 +301,11 @@
       var dock=q("#orderDock");
       if(!order.length){dock.classList.remove("show");dock.innerHTML="";return}
       var units=order.reduce(function(n,x){return n+x.qty},0);
-      dock.innerHTML='<div class="order-top"><b>'+units+' '+(units===1?'producto':'productos')+' en tu pedido</b><span class="order-total">'+esc(money(orderTotal()))+'</span></div><div class="order-actions"><button class="order-view" id="orderView" type="button">Ver pedido</button><button class="order-send" id="orderSend" type="button">Enviar por WhatsApp</button></div>';
+      dock.innerHTML='<div class="order-top"><b>'+units+' '+(units===1?'producto':'productos')+' en tu pedido</b><span class="order-total">'+esc(money(orderTotal()))+'</span></div><div class="order-actions"><button class="order-view" id="orderView" type="button">Ver pedido</button><button class="order-send" id="orderSend" type="button">WhatsApp</button></div><div class="order-actions"><button class="order-send" id="orderOnline" type="button">Pagar online</button></div>';
       dock.classList.add("show");
       q("#orderView").addEventListener("click",function(){showOrder(true)});
-      q("#orderSend").addEventListener("click",sendOrder)
+      q("#orderSend").addEventListener("click",sendOrder);
+      q("#orderOnline").addEventListener("click",payOrderOnline)
     }
     function showOrder(announce){
       if(!order.length){if(announce)bot("Tu pedido todavía está vacío. Dime qué buscas y te ayudo a elegir.");return}
@@ -300,6 +321,15 @@
       });
       var total=document.createElement("div");total.className="order-line";total.innerHTML="<span><b>Total referencial</b></span><b>"+esc(money(orderTotal()))+"</b>";b.appendChild(total);
       messages.appendChild(b);messages.scrollTop=messages.scrollHeight
+    }
+    function payOrderOnline(){
+      if(!order.length){bot("Tu pedido está vacío. Primero agreguemos algunos productos.");return}
+      if(order.length===1){
+        var item=order[0],url=item.product.addToCartUrl||item.product.productUrl||"https://viniteca.com.pe/";
+        if(item.qty>1 && url.indexOf("qty=")>-1)url=url.replace(/qty=\d+/,"qty="+item.qty);
+        window.open(url,"_blank");return
+      }
+      bot("Tu pedido tiene varios productos. Para conservar el carrito de PrestaShop correctamente, te muestro cada producto para abrirlo en la tienda. Si prefieres cerrar todo en un solo paso, usa WhatsApp.",order.map(function(x){return x.product}));
     }
     function sendOrder(){
       if(!order.length){bot("Tu pedido está vacío. Primero agreguemos algunos productos.");return}
@@ -361,7 +391,7 @@
       var n=norm(clean);
       if(!catalog.length){bot("Ahora mismo no puedo leer el catálogo. Prefiero no inventarte productos. Intenta nuevamente en unos minutos.");return}
       if(/ver mi pedido|mi pedido|resumen/.test(n)){showOrder(true);return}
-      if(/enviar pedido|finalizar|comprar|confirmar pedido/.test(n)&&order.length){sendOrder();return}
+      if(/pagar online|pago online|comprar online/.test(n)&&order.length){payOrderOnline();return}\n      if(/enviar pedido|finalizar|confirmar pedido/.test(n)&&order.length){sendOrder();return}
       if(/armar pedido|hacer pedido|pedido completo|cotizacion|cotización/.test(n)&&!extractBudget(clean)&&!intentCategories(clean).length){
         bot("Claro. Puedo ayudarte a armarlo paso a paso. Dime qué necesitas, para cuántas personas o qué presupuesto quieres manejar.");
         quickButtons(["Vinos para una cena","Para regalo","Espumantes","Hasta S/ 300"]);return
@@ -381,12 +411,12 @@
     function openSIRA(){
       q("#mira").classList.add("open");q("#mira").setAttribute("aria-hidden","false");
       if(!messages.children.length){
-        bot("Hola, soy SIRA 🍷. Puedo recomendarte productos reales del catálogo, ayudarte según tu presupuesto y armar tu pedido completo para enviarlo a La Viniteca.");
+        bot("Hola, soy SIRA 🍷. Puedo recomendarte productos reales del catálogo, ayudarte según tu presupuesto y armar tu pedido. Al final puedes pagar online en PrestaShop o enviarlo por WhatsApp.");
         quickButtons(["Ayúdame a elegir","Armar un pedido","Para regalo","Hasta S/ 200"])
       }
     }
     function closeSIRA(){q("#mira").classList.remove("open");q("#mira").setAttribute("aria-hidden","true")}
-    q("#miraLaunch").addEventListener("click",function(){q("#mira").classList.contains("open")?closeSIRA():openSIRA()});
+    q("#miraLaunch").addEventListener("click",function(){q("#mira").classList.contains("open")?closeSIRA():openSIRA()});\n    q("#siraPath").addEventListener("click",openSIRA);
     q("#miraClose").addEventListener("click",closeSIRA);
     q("#miraForm").addEventListener("submit",function(e){e.preventDefault();askSira(q("#miraInput").value)});
     renderOrderDock();
