@@ -19,15 +19,25 @@ export default async function handler(req, res) {
       return r.json();
     }
 
-    const [prodData, catData] = await Promise.all([
+    const [prodData, catData, featureData, valueData] = await Promise.all([
       getJSON("/products", {
-        display: "[id,name,reference,active,id_default_image,id_category_default]",
+        display: "full",
         limit: "0,1000",
         output_format: "JSON"
       }),
       getJSON("/categories", {
-        display: "[id,name,active]",
+        display: "[id,name,id_parent,active]",
         limit: "0,1000",
+        output_format: "JSON"
+      }),
+      getJSON("/product_features", {
+        display: "[id,name]",
+        limit: "0,1000",
+        output_format: "JSON"
+      }),
+      getJSON("/product_feature_values", {
+        display: "[id,id_feature,value]",
+        limit: "0,5000",
         output_format: "JSON"
       })
     ]);
@@ -45,9 +55,60 @@ export default async function handler(req, res) {
     const categories = new Map(
       (Array.isArray(catData.categories) ? catData.categories : []).map(c => [
         String(c.id),
-        cleanLang(c.name)
+        { name: cleanLang(c.name), parent: String(c.id_parent || "") }
       ])
     );
+    const featureNames = new Map(
+      (Array.isArray(featureData.product_features) ? featureData.product_features : []).map(f => [
+        String(f.id), cleanLang(f.name)
+      ])
+    );
+    const featureValues = new Map(
+      (Array.isArray(valueData.product_feature_values) ? valueData.product_feature_values : []).map(v => [
+        String(v.id), { featureId: String(v.id_feature), value: cleanLang(v.value) }
+      ])
+    );
+
+    const countryMap = {
+      "argentina":"Argentina","australia":"Australia","austria":"Austria","brasil":"Brasil",
+      "chile":"Chile","espana":"España","españa":"España","estados unidos":"Estados Unidos",
+      "usa":"Estados Unidos","francia":"Francia","alemania":"Alemania","italia":"Italia",
+      "nueva zelanda":"Nueva Zelanda","peru":"Perú","perú":"Perú","portugal":"Portugal",
+      "sudafrica":"Sudáfrica","sudáfrica":"Sudáfrica","turquia":"Turquía","turquía":"Turquía",
+      "uruguay":"Uruguay"
+    };
+    const norm = (s) => String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
+
+    function countryFromProduct(p) {
+      const associations = p.associations || {};
+      const pf = Array.isArray(associations.product_features) ? associations.product_features : [];
+      for (const link of pf) {
+        const fv = featureValues.get(String(link.id || link.id_feature_value || ""));
+        const fid = String(link.id_feature || fv?.featureId || "");
+        const fname = norm(featureNames.get(fid));
+        const value = fv?.value || "";
+        if (/(pais|country|origen|procedencia)/.test(fname)) {
+          const matched = countryMap[norm(value)];
+          if (matched) return matched;
+          if (value) return value;
+        }
+      }
+
+      const catLinks = Array.isArray(associations.categories) ? associations.categories : [];
+      for (const link of catLinks) {
+        const cat = categories.get(String(link.id));
+        if (!cat) continue;
+        const matched = countryMap[norm(cat.name)];
+        if (matched) return matched;
+      }
+
+      const defaultCat = categories.get(String(p.id_category_default));
+      if (defaultCat) {
+        const matched = countryMap[norm(defaultCat.name)];
+        if (matched) return matched;
+      }
+      return "";
+    }
 
     const isDemo = (p) => /hummingbird|demo_|framed poster|mug |cushion/i.test(
       [cleanLang(p.name), p.reference || ""].join(" ")
@@ -60,18 +121,21 @@ export default async function handler(req, res) {
         const imageId = p.id_default_image && String(p.id_default_image) !== "0"
           ? String(p.id_default_image)
           : "";
-        const category = categories.get(String(p.id_category_default)) || "Otros";
+        const category = categories.get(String(p.id_category_default))?.name || "Otros";
+        const numericPrice = Number.parseFloat(String(p.price || "0")) || 0;
         return {
           id: "ps-" + p.id,
           sourceId: Number(p.id),
           name: cleanLang(p.name),
           reference: p.reference || "",
           category,
+          country: countryFromProduct(p),
           winery: "",
           grape: "",
           region: "",
-          country: "",
           vintage: "",
+          price: numericPrice,
+          currency: "PEN",
           image: imageId ? "/api/prestashop-image?product=" + encodeURIComponent(p.id) + "&image=" + encodeURIComponent(imageId) : "",
           status: "Consultar disponibilidad"
         };
