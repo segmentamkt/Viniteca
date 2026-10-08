@@ -27,7 +27,7 @@
     .path-card{min-width:0;padding:18px 20px;border-radius:22px;border:1px solid rgba(103,19,34,.12);background:rgba(255,255,255,.92);box-shadow:0 12px 34px rgba(55,16,23,.08);display:flex;align-items:center;justify-content:space-between;gap:18px}
     .path-card.dark{background:linear-gradient(135deg,#2a0d13,#5c1321);color:#fff;border-color:rgba(255,255,255,.08)}
     .path-copy{min-width:0}.path-copy small{display:block;margin-bottom:5px;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--wine2)}.path-card.dark .path-copy small{color:#dcb9bf}.path-copy b{display:block;font-family:"Marcellus",serif;font-size:1.22rem;font-weight:400}.path-copy span{display:block;margin-top:5px;color:var(--muted);font-size:.72rem;line-height:1.45}.path-card.dark .path-copy span{color:rgba(255,255,255,.68)}
-    .path-cta{flex:0 0 auto;min-height:42px;padding:0 14px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;white-space:nowrap}.path-cta.shop-link{background:#1d1715;color:#fff}.path-cta.sira-link{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.1);color:#fff}
+    .path-cta{flex:0 0 auto;min-height:42px;padding:0 14px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;white-space:nowrap}.path-cta.shop-link{background:#1d1715;color:#fff}.path-cta.sira-link{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.1);color:#fff;appearance:none;-webkit-appearance:none}
     .catalog{padding:70px 0 100px}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.kicker{color:var(--wine2);font-size:.67rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700}.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin:9px 0 28px}.head h2{margin:0;font-family:"Marcellus",serif;font-size:clamp(2.25rem,6vw,4.2rem);font-weight:400;line-height:1}.head p{max-width:460px;margin:0;color:var(--muted);font-size:.9rem;line-height:1.55}
     .toolbar{position:sticky;top:10px;z-index:20;padding:14px;border:1px solid rgba(103,19,34,.1);border-radius:24px;background:rgba(247,242,235,.94);backdrop-filter:blur(18px);box-shadow:0 14px 42px rgba(60,20,25,.07)}
     .search-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}.search{position:relative}.search input{width:100%;height:50px;border:1px solid var(--line);border-radius:16px;background:#fff;padding:0 44px 0 16px;outline:none}.search input:focus{border-color:rgba(103,19,34,.42);box-shadow:0 0 0 4px rgba(103,19,34,.07)}.search span{position:absolute;right:16px;top:50%;transform:translateY(-50%);opacity:.55}.filter-btn{display:none;height:50px;border:1px solid var(--line);border-radius:16px;background:#fff;color:var(--wine);padding:0 16px;font-weight:700}
@@ -110,7 +110,7 @@
       </div>
       <div class="path-card dark">
         <div class="path-copy"><small>Compra asistida</small><b>Arma tu pedido con SIRA</b><span>Recibe recomendaciones, combina productos y envía el pedido por WhatsApp.</span></div>
-        <span class="path-cta sira-link">SIRA ↓</span>
+        <button class="path-cta sira-link" id="siraPathButton" type="button">SIRA ↓</button>
       </div>
     </div>
   </section>
@@ -359,6 +359,26 @@
       }
       next();
     }
+    function openSiraChat(){
+      var selectors=[
+        '[data-testid*="chat"]','[aria-label*="chat" i]','[aria-label*="mensaje" i]',
+        '[class*="chat"][role="button"]','[class*="launcher"]','[class*="bubble"]'
+      ];
+      for(var i=0;i<selectors.length;i++){
+        var nodes=Array.from(document.querySelectorAll(selectors[i]));
+        var target=nodes.find(function(el){
+          if(el.id==="siraPathButton"||el.id==="cartLaunch")return false;
+          var r=el.getBoundingClientRect();
+          return r.width>20&&r.height>20&&r.right>window.innerWidth-180&&r.bottom>window.innerHeight-180;
+        });
+        if(target){target.click();return}
+      }
+      var x=window.innerWidth-42,y=window.innerHeight-42;
+      var el=document.elementFromPoint(x,y);
+      if(el&&el.id!=="siraPathButton"&&el.id!=="cartLaunch"){el.click();return}
+      window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+    }
+    q("#siraPathButton").addEventListener("click",openSiraChat);
     q("#cartLaunch").addEventListener("click",function(){q("#cartPanel").classList.contains("open")?closeCart():openCart()});
     q("#cartClose").addEventListener("click",closeCart);
     renderCart();
