@@ -66,11 +66,11 @@
       <div class="kicker">Catálogo La Viniteca</div>
       <div class="head">
         <h2>Una selección para cada ocasión.</h2>
-        <p>Explora la selección de La Viniteca y consulta disponibilidad o detalles directamente por WhatsApp.</p>
+        <p>Explora el catálogo publicado de La Viniteca y consulta disponibilidad o detalles directamente por WhatsApp.</p>
       </div>
       <div class="toolbar">
         <div class="search-row">
-          <label class="search"><input id="searchInput" type="search" placeholder="Buscar vino, bodega, cepa, país…" autocomplete="off" aria-label="Buscar en el catálogo"><span>⌕</span></label>
+          <label class="search"><input id="searchInput" type="search" placeholder="Buscar producto, vino, licor, gourmet…" autocomplete="off" aria-label="Buscar en el catálogo"><span>⌕</span></label>
           <button class="filter-btn" id="filterBtn" type="button">Filtros</button>
         </div>
         <div class="chips" id="chips"></div>
@@ -98,42 +98,21 @@
   <script src="catalogo-data.js"></script>\n  <script src="/api/prestashop-images.js"></script>
   <script>
     var WA="51989039871";
-    var catalog=Array.isArray(window.VINITECA_CATALOG)?window.VINITECA_CATALOG:[];
+    var fallbackCatalog=Array.isArray(window.VINITECA_CATALOG)?window.VINITECA_CATALOG:[];
+    var prestashopCatalog=Array.isArray(window.VINITECA_PRESTASHOP_CATALOG)?window.VINITECA_PRESTASHOP_CATALOG:[];
+    var catalog=prestashopCatalog.length?prestashopCatalog:fallbackCatalog;
 
-    function normalizeMatch(v){
-      return String(v||"")
-        .normalize("NFD").replace(/[\\u0300-\\u036f]/g,"")
-        .toLowerCase()
-        .replace(/\\b(19|20)\\d{2}\\b/g," ")
-        .replace(/\\b(docg?|igt|dop|igp|aoc|magnum|reserva|reserve|riserva|classico)\\b/g," ")
-        .replace(/[^a-z0-9]+/g," ")
-        .replace(/\\s+/g," ")
-        .trim();
-    }
-    function tokenScore(a,b){
-      var A=new Set(normalizeMatch(a).split(" ").filter(function(x){return x.length>1}));
-      var B=new Set(normalizeMatch(b).split(" ").filter(function(x){return x.length>1}));
-      if(!A.size||!B.size)return 0;
-      var inter=0;A.forEach(function(x){if(B.has(x))inter++});
-      return inter/Math.max(A.size,B.size);
-    }
-    (function attachPrestashopImages(){
-      var remote=Array.isArray(window.PRESTASHOP_IMAGES)?window.PRESTASHOP_IMAGES:[];
-      if(!remote.length||!catalog.length)return;
-      catalog=catalog.map(function(p){
-        var clean=Object.assign({},p,{image:""});
-        var exact=remote.find(function(r){return normalizeMatch(r.name)===normalizeMatch(p.name)});
-        if(exact)return Object.assign(clean,{image:exact.image,prestashopId:exact.id});
-        var ranked=remote.map(function(r){return {r:r,s:tokenScore(p.name,r.name)}})
-          .filter(function(x){return x.s>=0.68})
-          .sort(function(a,b){return b.s-a.s});
-        if(ranked.length && (!ranked[1] || ranked[0].s-ranked[1].s>=0.06)){
-          return Object.assign(clean,{image:ranked[0].r.image,prestashopId:ranked[0].r.id});
-        }
-        return clean;
-      });
-    })();
-    var categoryOrder=["Tintos","Blancos","Rosados","Espumantes","Frizzantes","Licores/Destilados"];var categories=["Todos"].concat(categoryOrder.filter(function(cat){return catalog.some(function(p){return norm(p.category)===norm(cat)})}));
+    var preferredCategories=["Vino tinto","Tintos","Vino blanco","Blancos","Vino rosado","Rosados","Espumantes","Espumosos","Licores","Licores/Destilados","Grappa","Gin","Ron","Pisco","Aceites y vinagres","Regalos","Accesorios"];
+    var rawCategories=Array.from(new Set(catalog.map(function(p){return p.category}).filter(Boolean)));
+    rawCategories.sort(function(a,b){
+      var ai=preferredCategories.findIndex(function(x){return norm(x)===norm(a)});
+      var bi=preferredCategories.findIndex(function(x){return norm(x)===norm(b)});
+      if(ai===-1&&bi===-1)return String(a).localeCompare(String(b),"es");
+      if(ai===-1)return 1;
+      if(bi===-1)return -1;
+      return ai-bi;
+    });
+    var categories=["Todos"].concat(rawCategories);
     var state={category:"Todos",search:"",country:"",winery:"",grape:""};
     function q(s){return document.querySelector(s)}
     function norm(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim()}
@@ -175,7 +154,7 @@
     function render(){
       var list=filtered();
       q("#count").textContent=list.length+" "+(list.length===1?"producto":"productos");
-      if(!catalog.length)q("#grid").innerHTML='<div class="empty"><strong>Catálogo preparado para cargar.</strong><span>La estructura ya está lista. Los productos aparecerán aquí únicamente cuando sean importados desde el catálogo oficial de Canva de La Viniteca.</span></div>';
+      if(!catalog.length)q("#grid").innerHTML='<div class="empty"><strong>Catálogo no disponible temporalmente.</strong><span>No pudimos cargar el catálogo en este momento. Intenta nuevamente en unos minutos.</span></div>';
       else if(!list.length)q("#grid").innerHTML='<div class="empty"><strong>No encontramos coincidencias.</strong><span>Prueba otra búsqueda o limpia los filtros para volver a ver la selección disponible.</span></div>';
       else q("#grid").innerHTML=list.map(card).join("");
     }
