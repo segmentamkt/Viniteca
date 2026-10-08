@@ -4,7 +4,7 @@
   - Producto Demo excluido.
   - No se publican precios en la web.
   - Disponibilidad y detalles se consultan por WhatsApp.
-  - Las imágenes asignadas provienen de los catálogos oficiales cargados.
+  - Todas las imágenes se cargan dinámicamente desde PrestaShop.
 */
 window.VINITECA_CATALOG = [
   {
@@ -44,11 +44,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2014",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 2,
-      "col": 2
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "24-vino-blanco-mondavi-woodbridge-sauvignon-blanc",
@@ -74,11 +70,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2005",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 1,
-      "col": 3
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "27-casa-da-passarella-villa-oliveira-touriga-nacional-2009",
@@ -91,11 +83,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2009",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 2,
-      "col": 1
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "28-seghesio-rockpile-zinfandel-2013",
@@ -134,11 +122,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 7,
-      "col": 5
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "31-chateau-la-conseillante-pomerol-2006",
@@ -151,11 +135,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2006",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 1,
-      "col": 4
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "33-monte-del-fra-amarone-della-valpolicella-scarnocchio-2011",
@@ -168,11 +148,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2011",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 4,
-      "col": 2
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "34-monte-del-fra-valpolicella-classico-doc-2019",
@@ -185,11 +161,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2019",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 3,
-      "col": 5
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "35-cantina-colli-euganei-notte-di-galileo-riserva-2021",
@@ -202,11 +174,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 3,
-      "col": 0
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "36-dominique-piron-morgon-cote-du-py-magnum-2017",
@@ -219,11 +187,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 8,
-      "col": 1
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "37-dominique-piron-morgon-cote-du-py-2017",
@@ -236,11 +200,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 8,
-      "col": 1
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "38-domaine-debray-nuits-saint-georges-2011",
@@ -253,11 +213,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2011",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 1,
-      "col": 5
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "40-el-porvenir-laborum-de-parcela-petit-verdot-2016",
@@ -296,11 +252,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2015",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 8,
-      "col": 5
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "43-alvarado-reyes-cabernet-sauvignon",
@@ -313,11 +265,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 9,
-      "col": 5
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "44-conde-de-la-conquista-malbec-2022",
@@ -356,11 +304,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 9,
-      "col": 2
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "47-why-not-blend-2022",
@@ -373,11 +317,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 9,
-      "col": 3
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "48-raices-negras-cabernet-sauvignon-2022",
@@ -390,11 +330,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 9,
-      "col": 1
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "49-charsago-negra-criolla-2023",
@@ -407,11 +343,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2023",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 9,
-      "col": 4
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "50-hormiga-negra-malbec-2024",
@@ -424,11 +356,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2024",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 8,
-      "col": 3
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "51-quinta-do-portal-grande-reserva-2016",
@@ -441,11 +369,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2016",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 2,
-      "col": 0
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "53-cuvelier-los-andes-grand-vin-2015",
@@ -458,11 +382,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2015",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 9,
-      "col": 0
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "54-chateau-latour-grand-vin-pauillac-1999",
@@ -475,11 +395,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "1999",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 1,
-      "col": 1
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "55-chateau-lafite-rothschild-2010",
@@ -492,11 +408,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2010",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 1,
-      "col": 0
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "56-chateau-lynch-bages-2011",
@@ -509,11 +421,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2011",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 1,
-      "col": 2
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "57-chateau-l-evangile-2011",
@@ -617,11 +525,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 8,
-      "col": 0
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "65-jean-claude-chanudet-beaujolais-villages-la-cuvee-du-chat-magnum-2018",
@@ -634,11 +538,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2018",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 8,
-      "col": 0
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "66-2013-domaine-des-pothiers-cote-roannaise-n-6",
@@ -664,11 +564,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2019",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 6,
-      "col": 1
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "68-il-pumo-primitivo-salento-igp-2022",
@@ -681,11 +577,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 4,
-      "col": 5
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "69-il-pumo-negroamaro-igp-salento-2023",
@@ -711,11 +603,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 5,
-      "col": 3
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "71-talo-malvasia-nera-2022",
@@ -728,11 +616,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 5,
-      "col": 2
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "72-naca-primitivo-puglia-igp-bio-2024",
@@ -745,11 +629,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2024",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 5,
-      "col": 1
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "73-talo-negroamaro-2023",
@@ -762,11 +642,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2023",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 5,
-      "col": 4
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "74-san-marzano-collezione-cinquanta",
@@ -779,11 +655,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 6,
-      "col": 2
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "75-talo-primitivo-di-manduria-2022",
@@ -796,11 +668,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 5,
-      "col": 5
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "76-il-pumo-salice-salentino-dop-2021",
@@ -813,11 +681,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 5,
-      "col": 0
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "77-domodo-montepulciano-d-abruzzo-dop-2021",
@@ -830,11 +694,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 7,
-      "col": 1
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "78-domodo-sangiovese-igp-puglia-2022",
@@ -847,11 +707,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 7,
-      "col": 0
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "79-domodo-zinfandel-igp-puglia-2021",
@@ -864,11 +720,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 7,
-      "col": 2
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "80-barollo-frater-rosso-2021",
@@ -881,11 +733,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 3,
-      "col": 3
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "81-barollo-frank-2020",
@@ -898,11 +746,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2020",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 3,
-      "col": 4
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "82-alain-gras-saint-romain-blanc-2017",
@@ -967,11 +811,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2015",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 7,
-      "col": 3
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "87-mimo-torontel-secano-2017",
@@ -997,11 +837,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2024",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 4,
-      "col": 1
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "89-monte-del-fra-custoza-2016",
@@ -1014,11 +850,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2016",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 4,
-      "col": 0
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "90-chamisal-chardonnay-2015",
@@ -1044,11 +876,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2015",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 8,
-      "col": 2
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "93-pine-ridge-dijon-clones-carneros-chardonnay-2013",
@@ -1061,11 +889,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2013",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 2,
-      "col": 4
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "94-puligny-montrachet-grand-vin-jacques-carillon-2013",
@@ -1117,11 +941,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2013",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 2,
-      "col": 3
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "98-de-loach-vineyards-ofs-chardonnay-2011",
@@ -1134,11 +954,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2011",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 2,
-      "col": 3
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "99-la-grande-reserve-du-moulin-muscadet-de-sevre-et-maine-sur-lie-2017",
@@ -1151,11 +967,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2017",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 7,
-      "col": 4
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "100-el-porvenir-laborum-torrontes-2021",
@@ -1168,11 +980,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2021",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 2,
-      "col": 5
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "101-il-pumo-chardonnay-igp-puglia-2022",
@@ -1185,11 +993,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 4,
-      "col": 3
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "102-il-pumo-sauvignon-malvasia-igp-salento-2022",
@@ -1202,11 +1006,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 4,
-      "col": 4
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "103-talo-verdeca-2022",
@@ -1219,11 +1019,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 6,
-      "col": 0
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "104-domodo-chardonnay-igp-puglia-2022",
@@ -1236,11 +1032,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 6,
-      "col": 5
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "105-domodo-pinot-grigio-igp-puglia-2022",
@@ -1253,11 +1045,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 6,
-      "col": 4
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "106-domodo-trebbiano-igp-puglia-2022",
@@ -1270,11 +1058,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 6,
-      "col": 3
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "107-barollo-frater-bianco-2022",
@@ -1287,11 +1071,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 3,
-      "col": 1
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "108-barollo-chardonnay-2019",
@@ -1304,11 +1084,7 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2019",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 3,
-      "col": 2
-    }
+    "status": "Consultar disponibilidad"
   },
   {
     "id": "109-cuvelier-los-andes-malbec-rose-2022",
@@ -1321,10 +1097,6 @@ window.VINITECA_CATALOG = [
     "country": "",
     "vintage": "2022",
     "image": "",
-    "status": "Consultar disponibilidad",
-    "sprite": {
-      "row": 8,
-      "col": 4
-    }
+    "status": "Consultar disponibilidad"
   }
 ];
