@@ -391,7 +391,8 @@
       var n=norm(clean);
       if(!catalog.length){bot("Ahora mismo no puedo leer el catálogo. Prefiero no inventarte productos. Intenta nuevamente en unos minutos.");return}
       if(/ver mi pedido|mi pedido|resumen/.test(n)){showOrder(true);return}
-      if(/pagar online|pago online|comprar online/.test(n)&&order.length){payOrderOnline();return}\n      if(/enviar pedido|finalizar|confirmar pedido/.test(n)&&order.length){sendOrder();return}
+      if(/pagar online|pago online|comprar online/.test(n)&&order.length){payOrderOnline();return}
+      if(/enviar pedido|finalizar|confirmar pedido/.test(n)&&order.length){sendOrder();return}
       if(/armar pedido|hacer pedido|pedido completo|cotizacion|cotización/.test(n)&&!extractBudget(clean)&&!intentCategories(clean).length){
         bot("Claro. Puedo ayudarte a armarlo paso a paso. Dime qué necesitas, para cuántas personas o qué presupuesto quieres manejar.");
         quickButtons(["Vinos para una cena","Para regalo","Espumantes","Hasta S/ 300"]);return
@@ -416,7 +417,8 @@
       }
     }
     function closeSIRA(){q("#mira").classList.remove("open");q("#mira").setAttribute("aria-hidden","true")}
-    q("#miraLaunch").addEventListener("click",function(){q("#mira").classList.contains("open")?closeSIRA():openSIRA()});\n    q("#siraPath").addEventListener("click",openSIRA);
+    q("#miraLaunch").addEventListener("click",function(){q("#mira").classList.contains("open")?closeSIRA():openSIRA()});
+    q("#siraPath").addEventListener("click",openSIRA);
     q("#miraClose").addEventListener("click",closeSIRA);
     q("#miraForm").addEventListener("submit",function(e){e.preventDefault();askSira(q("#miraInput").value)});
     renderOrderDock();
