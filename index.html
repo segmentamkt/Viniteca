@@ -37,11 +37,14 @@
     .results{display:flex;align-items:center;justify-content:space-between;margin:24px 2px 14px;color:var(--muted);font-size:.78rem}.clear{border:0;background:transparent;color:var(--wine2);font-weight:700}
     .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{position:relative;display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid rgba(103,19,34,.09);border-radius:24px;background:#fff;box-shadow:0 12px 36px rgba(58,18,25,.06);transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 18px 50px rgba(63,16,25,.12)}
     .media{aspect-ratio:4/5;background:linear-gradient(145deg,#f6efe7,#ece0d3);display:grid;place-items:center;overflow:hidden}.media img{width:100%;height:100%;object-fit:contain;padding:16px}.placeholder{width:46px;height:178px;border-radius:18px 18px 12px 12px;background:linear-gradient(180deg,#2e241f,#15100e);opacity:.23;position:relative}.placeholder:before{content:"";position:absolute;width:20px;height:56px;left:50%;top:-44px;transform:translateX(-50%);background:#1c1512;border-radius:5px 5px 0 0}
-    .status{position:absolute;top:12px;left:12px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.92);font-size:.62rem;font-weight:800;color:var(--wine)}.status.out{background:#2f2a28;color:#fff}.body{display:flex;flex:1;flex-direction:column;padding:16px}.meta{font-size:.61rem;letter-spacing:.12em;text-transform:uppercase;color:var(--wine2);font-weight:800}.card h3{font-family:"Marcellus",serif;font-size:1.15rem;font-weight:400;line-height:1.16;margin:7px 0 9px}.price{margin:1px 0 9px;color:var(--wine);font-size:1rem;font-weight:800}.details{display:grid;gap:4px;color:var(--muted);font-size:.72rem;line-height:1.4}.actions{display:flex;gap:8px;margin-top:auto;padding-top:15px}.actions button,.actions a{flex:1;min-height:40px;border-radius:12px;display:grid;place-items:center;font-size:.72rem;font-weight:800}.view{border:1px solid var(--line);background:#fff;color:var(--wine)}.wa{border:0;background:var(--wine);color:#fff}.disabled{opacity:.42;pointer-events:none}
+    .status{position:absolute;top:12px;left:12px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.92);font-size:.62rem;font-weight:800;color:var(--wine)}.status.out{background:#2f2a28;color:#fff}.body{display:flex;flex:1;flex-direction:column;padding:16px}.meta{font-size:.61rem;letter-spacing:.12em;text-transform:uppercase;color:var(--wine2);font-weight:800}.card h3{font-family:"Marcellus",serif;font-size:1.15rem;font-weight:400;line-height:1.16;margin:7px 0 9px}.price{margin:1px 0 9px;color:var(--wine);font-size:1rem;font-weight:800}.details{display:grid;gap:4px;color:var(--muted);font-size:.72rem;line-height:1.4}.actions{display:flex;gap:8px;margin-top:auto;padding-top:15px}.actions button,.actions a{flex:1;min-height:40px;border-radius:12px;display:grid;place-items:center;font-size:.72rem;font-weight:800}.view{border:1px solid var(--line);background:#fff;color:var(--wine)}.wa{border:1px solid rgba(255,255,255,.12);background:linear-gradient(135deg,#861d31 0%,#64101f 62%,#4c0b16 100%);color:#fff;display:flex!important;align-items:center;justify-content:center;gap:8px;min-height:44px!important;box-shadow:0 10px 24px rgba(103,19,34,.2);position:relative;overflow:hidden;transition:.2s}
+    .wa:before{content:"";width:7px;height:7px;border-radius:50%;background:#35d875;box-shadow:0 0 0 4px rgba(53,216,117,.12)}
+    .card:hover .wa{transform:translateY(-1px);box-shadow:0 14px 30px rgba(103,19,34,.28);background:linear-gradient(135deg,#93233a 0%,#6d1324 62%,#520d19 100%)}.disabled{opacity:.42;pointer-events:none}
     .empty{grid-column:1/-1;padding:50px 22px;text-align:center;border:1px dashed rgba(103,19,34,.22);border-radius:26px;background:rgba(255,255,255,.46)}.empty strong{display:block;margin-bottom:8px;font-family:"Marcellus",serif;font-size:1.5rem;font-weight:400}.empty span{display:block;max-width:590px;margin:auto;color:var(--muted);font-size:.86rem;line-height:1.55}
     .backdrop{position:fixed;inset:0;z-index:70;background:rgba(17,8,9,.56);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:.2s}.backdrop.open{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;z-index:71;width:min(620px,100%);max-height:88vh;overflow:auto;transform:translate(-50%,105%);background:var(--paper);border-radius:28px 28px 0 0;box-shadow:0 -20px 60px rgba(0,0,0,.22);transition:.28s}.sheet.open{transform:translate(-50%,0)}.handle{width:46px;height:4px;border-radius:99px;background:#cbbdb6;margin:10px auto 2px}.sheet-content{padding:18px 22px calc(var(--safe-bottom) + 24px)}.close{float:right;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff}.sheet-media{clear:both;aspect-ratio:16/10;border-radius:20px;background:linear-gradient(145deg,#f6efe7,#ece0d3);display:grid;place-items:center;overflow:hidden;margin:10px 0 18px}.sheet-media img{width:100%;height:100%;object-fit:contain;padding:18px}.sheet h3{margin:7px 0 13px;font-family:"Marcellus",serif;font-size:2rem;font-weight:400;line-height:1.05}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fact{padding:12px;border:1px solid rgba(103,19,34,.08);border-radius:14px;background:#fff}.fact b{display:block;margin-bottom:4px;color:var(--muted);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase}.fact span{font-size:.8rem}.sheet-wa{width:100%;min-height:50px;margin-top:16px;border:0;border-radius:14px;background:var(--wine);color:#fff;font-weight:800}
-    .mira-launch{position:fixed;right:18px;bottom:calc(var(--safe-bottom) + 12px);z-index:90;width:66px;height:66px;border:0;border-radius:50%;background:radial-gradient(circle at 35% 28%,#bc4a5c,var(--wine2) 42%,#4e0d18 100%);color:#fff;box-shadow:0 16px 42px rgba(103,19,34,.38);display:grid;place-items:center}.mira-launch:before{content:"M";font-family:"Marcellus",serif;font-size:1.9rem}.mira-launch:after{content:"Mira";position:absolute;right:58px;bottom:9px;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--wine);font-size:.69rem;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.08)}
-    .mira{position:fixed;right:16px;bottom:calc(var(--safe-bottom) + 88px);z-index:89;width:min(370px,calc(100% - 32px));height:min(560px,calc(100dvh - 120px));overflow:hidden;border-radius:26px;background:#fff;box-shadow:0 26px 80px rgba(36,9,14,.28);display:flex;flex-direction:column;transform:translateY(18px) scale(.96);opacity:0;pointer-events:none;transition:.2s}.mira.open{transform:none;opacity:1;pointer-events:auto}.mira-head{padding:16px 17px;background:linear-gradient(135deg,#4b0d17,var(--wine2));color:#fff;display:flex;align-items:center;justify-content:space-between}.mira-title{display:flex;align-items:center;gap:10px}.avatar{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;font-family:"Marcellus",serif;font-size:1.25rem}.mira-head b{display:block;font-size:.84rem}.mira-head small{display:block;margin-top:2px;opacity:.72;font-size:.64rem}.mira-close{width:34px;height:34px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff}.messages{flex:1;overflow:auto;padding:16px;background:#faf7f3;display:flex;flex-direction:column;gap:10px}.bubble{max-width:86%;padding:10px 12px;border-radius:16px;font-size:.77rem;line-height:1.45}.bot{align-self:flex-start;background:#fff;border:1px solid rgba(103,19,34,.08);border-bottom-left-radius:5px}.user{align-self:flex-end;background:var(--wine);color:#fff;border-bottom-right-radius:5px}.quick{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}.quick button{border:1px solid var(--line);background:#fff;color:var(--wine);border-radius:999px;padding:7px 9px;font-size:.67rem;font-weight:700}.mira-product{display:block;width:100%;margin-top:7px;padding:9px;text-align:left;border:1px solid rgba(103,19,34,.1);border-radius:12px;background:#fff;color:var(--ink)}.mira-product b{font-family:"Marcellus",serif;font-size:.88rem;font-weight:400}.mira-product small{display:block;margin-top:3px;color:var(--muted);font-size:.63rem}.mira-form{padding:10px;border-top:1px solid rgba(103,19,34,.08);display:grid;grid-template-columns:1fr 42px;gap:8px}.mira-form input{height:42px;border:1px solid var(--line);border-radius:13px;padding:0 12px;outline:none}.send{border:0;border-radius:13px;background:var(--wine);color:#fff;font-weight:800}
+    .mira-launch{position:fixed;right:18px;bottom:calc(var(--safe-bottom) + 12px);z-index:90;width:66px;height:66px;border:1px solid rgba(255,255,255,.14);border-radius:50%;background:radial-gradient(circle at 35% 28%,#bc4a5c,var(--wine2) 42%,#4e0d18 100%);color:#fff;box-shadow:0 16px 42px rgba(103,19,34,.38);display:grid;place-items:center}.mira-launch:before{content:"S";font-family:"Marcellus",serif;font-size:1.9rem}.mira-launch:after{content:"SIRA";position:absolute;right:58px;bottom:9px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--wine);font-size:.69rem;letter-spacing:.08em;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .mira{position:fixed;right:16px;bottom:calc(var(--safe-bottom) + 88px);z-index:89;width:min(390px,calc(100% - 32px));height:min(620px,calc(100dvh - 120px));overflow:hidden;border-radius:26px;background:#fff;box-shadow:0 26px 80px rgba(36,9,14,.28);display:flex;flex-direction:column;transform:translateY(18px) scale(.96);opacity:0;pointer-events:none;transition:.2s}.mira.open{transform:none;opacity:1;pointer-events:auto}.mira-head{padding:16px 17px;background:linear-gradient(135deg,#4b0d17,var(--wine2));color:#fff;display:flex;align-items:center;justify-content:space-between}.mira-title{display:flex;align-items:center;gap:10px}.avatar{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;font-family:"Marcellus",serif;font-size:1.25rem}.mira-head b{display:block;font-size:.84rem}.mira-head small{display:block;margin-top:2px;opacity:.72;font-size:.64rem}.mira-close{width:34px;height:34px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff}.messages{flex:1;overflow:auto;padding:16px;background:#faf7f3;display:flex;flex-direction:column;gap:10px}.bubble{max-width:86%;padding:10px 12px;border-radius:16px;font-size:.77rem;line-height:1.45}.bot{align-self:flex-start;background:#fff;border:1px solid rgba(103,19,34,.08);border-bottom-left-radius:5px}.user{align-self:flex-end;background:var(--wine);color:#fff;border-bottom-right-radius:5px}.quick{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}.quick button{border:1px solid var(--line);background:#fff;color:var(--wine);border-radius:999px;padding:7px 9px;font-size:.67rem;font-weight:700}.mira-product{display:block;width:100%;margin-top:7px;padding:10px;text-align:left;border:1px solid rgba(103,19,34,.1);border-radius:14px;background:#fff;color:var(--ink)}.mira-product b{display:block;font-family:"Marcellus",serif;font-size:.9rem;font-weight:400}.mira-product small{display:block;margin-top:3px;color:var(--muted);font-size:.63rem}.mira-product .sira-price{margin-top:5px;color:var(--wine);font-size:.72rem;font-weight:800}.sira-p-actions{display:flex;gap:6px;margin-top:8px}.sira-p-actions button{flex:1;min-height:34px;border-radius:10px;font-size:.66rem;font-weight:800}.sira-add{border:0;background:var(--wine);color:#fff}.sira-view{border:1px solid var(--line);background:#fff;color:var(--wine)}
+    .order-dock{display:none;padding:10px 11px;border-top:1px solid rgba(103,19,34,.08);background:#fff}.order-dock.show{display:block}.order-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.order-top b{font-size:.73rem}.order-total{font-family:"Marcellus",serif;color:var(--wine);font-size:.94rem}.order-actions{display:grid;grid-template-columns:1fr 1.3fr;gap:7px;margin-top:8px}.order-actions button{min-height:38px;border-radius:11px;font-size:.67rem;font-weight:800}.order-view{border:1px solid var(--line);background:#fff;color:var(--wine)}.order-send{border:0;background:linear-gradient(135deg,#861d31,#560d1a);color:#fff}.order-line{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:7px;padding:8px;border-radius:11px;background:#faf7f3}.order-line span{min-width:0;font-size:.67rem}.qty{display:flex;align-items:center;gap:5px}.qty button{width:27px;height:27px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--wine);font-weight:800}.mira-form{padding:10px;border-top:1px solid rgba(103,19,34,.08);display:grid;grid-template-columns:1fr 42px;gap:8px}.mira-form input{height:42px;border:1px solid var(--line);border-radius:13px;padding:0 12px;outline:none}.send{border:0;border-radius:13px;background:var(--wine);color:#fff;font-weight:800}
     @media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.head{align-items:start;flex-direction:column}.filter-btn{display:block}.filters{display:none;grid-template-columns:1fr}.filters.open{display:grid}}
     @media(max-width:560px){.hero-inner{width:calc(100% - 36px)}.ig span{display:none}.catalog{padding-top:56px}.wrap{width:calc(100% - 24px)}.grid{gap:10px}.card{border-radius:19px}.body{padding:12px}.card h3{font-size:1rem}.details{font-size:.66rem}.actions{flex-direction:column}.filter-btn{width:48px;padding:0;font-size:0}.filter-btn:before{content:"☷";font-size:1.1rem}.mira-launch{width:60px;height:60px}.mira-launch:after{display:none}.facts{grid-template-columns:1fr}}
   </style>
@@ -58,7 +61,7 @@
       <div class="hero-copy">
         <div class="eyebrow">Selección · experiencia · origen</div>
         <h1>Encuentra el vino <em>para ese momento.</em></h1>
-        <p>Explora el catálogo de La Viniteca, filtra por estilo y origen, o pregúntale a Mira para recibir una orientación breve sin salir de la página.</p>
+        <p>Explora el catálogo de La Viniteca, filtra por estilo y origen, o conversa con SIRA para recibir recomendaciones y armar tu pedido sin salir de la página.</p>
         <div class="ctas">
           <a class="btn primary" href="#catalogo">Ver catálogo ↓</a>
           <a class="btn ghost" href="https://wa.me/51989039871?text=Hola%20La%20Viniteca%2C%20quiero%20recibir%20asesor%C3%ADa." target="_blank" rel="noopener noreferrer">Hablar por WhatsApp ↗</a>
@@ -108,14 +111,15 @@
   <div class="backdrop" id="backdrop"></div>
   <aside class="sheet" id="sheet" aria-hidden="true"><div class="handle"></div><div class="sheet-content" id="sheetContent"></div></aside>
 
-  <button class="mira-launch" id="miraLaunch" aria-label="Abrir Mira"></button>
+  <button class="mira-launch" id="miraLaunch" aria-label="Abrir SIRA"></button>
   <aside class="mira" id="mira" aria-hidden="true">
-    <div class="mira-head"><div class="mira-title"><div class="avatar">M</div><div><b>Mira</b><small>Asistente de La Viniteca</small></div></div><button class="mira-close" id="miraClose" aria-label="Cerrar">×</button></div>
+    <div class="mira-head"><div class="mira-title"><div class="avatar">S</div><div><b>SIRA</b><small>Sommelier virtual · La Viniteca</small></div></div><button class="mira-close" id="miraClose" aria-label="Cerrar">×</button></div>
     <div class="messages" id="messages"></div>
-    <form class="mira-form" id="miraForm"><input id="miraInput" placeholder="Ej. Busco un tinto italiano" autocomplete="off"><button class="send" aria-label="Enviar">→</button></form>
+    <div class="order-dock" id="orderDock"></div><form class="mira-form" id="miraForm"><input id="miraInput" placeholder="Ej. 3 vinos para regalo hasta S/ 300" autocomplete="off"><button class="send" aria-label="Enviar">→</button></form>
   </aside>
 
-  <script src="catalogo-data.js"></script>\n  <script src="/api/prestashop-catalog.js"></script>
+  <script src="catalogo-data.js"></script>
+  <script src="/api/prestashop-catalog.js"></script>
   <script>
     var WA="51989039871";
     var fallbackCatalog=Array.isArray(window.VINITECA_CATALOG)?window.VINITECA_CATALOG:[];
@@ -241,43 +245,151 @@
       buildChips();buildCountries();initPrice();render();
     });
 
-    var messages=q("#messages");
+    var messages=q("#messages"),order=[];
     function bot(text,products){
       products=products||[];
       var b=document.createElement("div");b.className="bubble bot";b.innerHTML=esc(text).replace(/\n/g,"<br>");
-      products.forEach(function(p){var x=document.createElement("button");x.type="button";x.className="mira-product";x.innerHTML="<b>"+esc(p.name)+"</b><small>"+esc(joined(p.category,p.grape,p.country))+"</small>";x.addEventListener("click",function(){window.open(waUrl(p),"_blank")});b.appendChild(x)});
+      products.forEach(function(p){
+        var card=document.createElement("div");card.className="mira-product";
+        card.innerHTML="<b>"+esc(p.name)+"</b><small>"+esc(joined(p.category,p.country,p.reference))+"</small><div class=\"sira-price\">"+esc(money(p.price))+"</div><div class=\"sira-p-actions\"><button class=\"sira-add\" type=\"button\">Agregar al pedido</button><button class=\"sira-view\" type=\"button\">Consultar</button></div>";
+        card.querySelector(".sira-add").addEventListener("click",function(){addToOrder(p)});
+        card.querySelector(".sira-view").addEventListener("click",function(){window.open(waUrl(p),"_blank")});
+        b.appendChild(card);
+      });
       messages.appendChild(b);messages.scrollTop=messages.scrollHeight
     }
     function user(text){var b=document.createElement("div");b.className="bubble user";b.textContent=text;messages.appendChild(b);messages.scrollTop=messages.scrollHeight}
-    function quick(){
+    function quickButtons(labels){
       var w=document.createElement("div");w.className="quick";
-      ["Tinto","Blanco","Espumante","Rosado","Italia","Para regalo"].forEach(function(label){var b=document.createElement("button");b.type="button";b.textContent=label;b.addEventListener("click",function(){askMira(label)});w.appendChild(b)});
+      labels.forEach(function(label){var b=document.createElement("button");b.type="button";b.textContent=label;b.addEventListener("click",function(){askSira(label)});w.appendChild(b)});
       if(messages.lastElementChild)messages.lastElementChild.appendChild(w)
     }
-    function miraMatches(text){
-      var n=norm(text);if(!catalog.length)return[];
-      return catalog.filter(function(p){
+    function addToOrder(p){
+      var item=order.find(function(x){return x.product.id===p.id});
+      if(item)item.qty+=1;else order.push({product:p,qty:1});
+      renderOrderDock();
+      bot("Agregué "+p.name+" a tu pedido. ¿Seguimos buscando algo más?");
+      quickButtons(["Seguir eligiendo","Ver mi pedido","Enviar pedido"]);
+    }
+    function changeQty(id,delta){
+      var item=order.find(function(x){return x.product.id===id});if(!item)return;
+      item.qty+=delta;if(item.qty<=0)order=order.filter(function(x){return x.product.id!==id});
+      renderOrderDock();showOrder(false)
+    }
+    function orderTotal(){return order.reduce(function(sum,x){return sum+(Number(x.product.price)||0)*x.qty},0)}
+    function renderOrderDock(){
+      var dock=q("#orderDock");
+      if(!order.length){dock.classList.remove("show");dock.innerHTML="";return}
+      var units=order.reduce(function(n,x){return n+x.qty},0);
+      dock.innerHTML='<div class="order-top"><b>'+units+' '+(units===1?'producto':'productos')+' en tu pedido</b><span class="order-total">'+esc(money(orderTotal()))+'</span></div><div class="order-actions"><button class="order-view" id="orderView" type="button">Ver pedido</button><button class="order-send" id="orderSend" type="button">Enviar por WhatsApp</button></div>';
+      dock.classList.add("show");
+      q("#orderView").addEventListener("click",function(){showOrder(true)});
+      q("#orderSend").addEventListener("click",sendOrder)
+    }
+    function showOrder(announce){
+      if(!order.length){if(announce)bot("Tu pedido todavía está vacío. Dime qué buscas y te ayudo a elegir.");return}
+      var b=document.createElement("div");b.className="bubble bot";
+      b.innerHTML="<b>Tu pedido</b>";
+      order.forEach(function(item){
+        var row=document.createElement("div");row.className="order-line";
+        row.innerHTML='<span>'+esc(item.product.name)+'<br><b>'+esc(money((Number(item.product.price)||0)*item.qty))+'</b></span><div class="qty"><button type="button" aria-label="Restar">−</button><strong>'+item.qty+'</strong><button type="button" aria-label="Sumar">+</button></div>';
+        var btns=row.querySelectorAll("button");
+        btns[0].addEventListener("click",function(){changeQty(item.product.id,-1)});
+        btns[1].addEventListener("click",function(){changeQty(item.product.id,1)});
+        b.appendChild(row);
+      });
+      var total=document.createElement("div");total.className="order-line";total.innerHTML="<span><b>Total referencial</b></span><b>"+esc(money(orderTotal()))+"</b>";b.appendChild(total);
+      messages.appendChild(b);messages.scrollTop=messages.scrollHeight
+    }
+    function sendOrder(){
+      if(!order.length){bot("Tu pedido está vacío. Primero agreguemos algunos productos.");return}
+      var lines=["Hola La Viniteca, armé este pedido con SIRA:"];
+      order.forEach(function(item){lines.push("• "+item.qty+" x "+item.product.name+" — "+money((Number(item.product.price)||0)*item.qty))});
+      lines.push("Total referencial: "+money(orderTotal()));
+      lines.push("Quisiera confirmar disponibilidad y coordinar la compra.");
+      window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(lines.join("\n")),"_blank")
+    }
+    function extractBudget(text){
+      var n=norm(text),m=n.match(/(?:s\/?\.?\s*)?(\d{2,5})(?:\s*(?:soles|pen))?/);
+      if(!m)return null;
+      var value=Number(m[1]);return value>0?value:null
+    }
+    function intentCategories(text){
+      var n=norm(text),wanted=[];
+      var map=[
+        ["tinto",["tinto","tintos","vino tinto"]],
+        ["blanco",["blanco","blancos","vino blanco"]],
+        ["rosado",["rosado","rosados","rose"]],
+        ["espumante",["espumante","espumantes","espumoso","espumosos","prosecco","cava"]],
+        ["pisco",["pisco"]],["gin",["gin"]],["ron",["ron"]],["grappa",["grappa"]],
+        ["aceite",["aceite","aceites"]],["regalo",["regalo","regalos"]]
+      ];
+      map.forEach(function(pair){if(pair[1].some(function(k){return n.indexOf(norm(k))>-1}))wanted.push(pair[0])});
+      return wanted
+    }
+    function productMatchesIntent(p,intents){
+      if(!intents.length)return true;
+      var hay=norm([p.name,p.category,p.reference].filter(Boolean).join(" "));
+      return intents.some(function(i){return hay.indexOf(i)>-1||(i==="espumante"&&/espum|prosecco|cava/.test(hay))||(i==="aceite"&&hay.indexOf("aceite")>-1)})
+    }
+    function countryIntent(text){
+      var countries=uniques("country"),n=norm(text);
+      return countries.find(function(c){return n.indexOf(norm(c))>-1})||""
+    }
+    function siraMatches(text){
+      var n=norm(text),budget=extractBudget(text),intents=intentCategories(text),country=countryIntent(text);
+      var list=catalog.filter(function(p){
         if(out(p))return false;
-        var fields=[p.name,p.category,p.winery,p.grape,p.region,p.country].filter(Boolean).map(norm);
-        return fields.some(function(f){return n.indexOf(f)>-1||f.indexOf(n)>-1||f.split(" ").some(function(t){return t.length>2&&n.indexOf(t)>-1})})
-      }).slice(0,3)
+        var price=Number(p.price)||0;
+        if(budget&&price>budget)return false;
+        if(country&&p.country!==country)return false;
+        if(!productMatchesIntent(p,intents))return false;
+        return true
+      });
+      if(/econom|barat|accesible|menos/.test(n))list.sort(function(a,b){return (Number(a.price)||999999)-(Number(b.price)||999999)});
+      else if(/premium|exclusiv|especial|alta gama|mejor/.test(n))list.sort(function(a,b){return (Number(b.price)||0)-(Number(a.price)||0)});
+      else list.sort(function(a,b){
+        var aName=norm([a.name,a.category,a.country].join(" ")),bName=norm([b.name,b.category,b.country].join(" "));
+        var as=aName.split(" ").filter(function(t){return t.length>2&&n.indexOf(t)>-1}).length;
+        var bs=bName.split(" ").filter(function(t){return t.length>2&&n.indexOf(t)>-1}).length;
+        return bs-as
+      });
+      return list.slice(0,4)
     }
-    function askMira(text){
+    function askSira(text){
       var clean=String(text||"").trim();if(!clean)return;user(clean);q("#miraInput").value="";
-      if(!catalog.length){bot("Todavía no tengo cargado el catálogo oficial. Prefiero no inventarte una recomendación. En cuanto se carguen los productos del Canva, podré orientarte únicamente con esa selección.");return}
-      if(norm(clean).indexOf("regalo")>-1){bot("Claro. Para recomendarte bien, dime qué estilo prefieres: tinto, blanco, espumante o rosado.");return}
-      var hits=miraMatches(clean);
-      if(hits.length)bot("Encontré "+(hits.length===1?"esta opción":"estas opciones")+" dentro del catálogo disponible:",hits);
-      else bot("No encontré una coincidencia segura con esa descripción. Prueba indicando tipo de vino, país, bodega o cepa; prefiero no sugerir algo que no esté confirmado.")
+      var n=norm(clean);
+      if(!catalog.length){bot("Ahora mismo no puedo leer el catálogo. Prefiero no inventarte productos. Intenta nuevamente en unos minutos.");return}
+      if(/ver mi pedido|mi pedido|resumen/.test(n)){showOrder(true);return}
+      if(/enviar pedido|finalizar|comprar|confirmar pedido/.test(n)&&order.length){sendOrder();return}
+      if(/armar pedido|hacer pedido|pedido completo|cotizacion|cotización/.test(n)&&!extractBudget(clean)&&!intentCategories(clean).length){
+        bot("Claro. Puedo ayudarte a armarlo paso a paso. Dime qué necesitas, para cuántas personas o qué presupuesto quieres manejar.");
+        quickButtons(["Vinos para una cena","Para regalo","Espumantes","Hasta S/ 300"]);return
+      }
+      if(/regalo/.test(n)&&!extractBudget(clean)){
+        bot("Para regalo puedo ayudarte a equilibrar presentación y presupuesto. ¿Qué rango quieres manejar por botella o por regalo?");
+        quickButtons(["Hasta S/ 100","Hasta S/ 200","Hasta S/ 300","Premium"]);return
+      }
+      var hits=siraMatches(clean);
+      if(hits.length){
+        var intro=order.length?"Estas opciones pueden complementar tu pedido:":"Te recomiendo empezar por estas opciones del catálogo:";
+        bot(intro,hits);return
+      }
+      bot("No encontré una coincidencia suficientemente clara. Dime tipo de producto, país o presupuesto y te ayudo a afinar la búsqueda.");
+      quickButtons(["Tinto","Blanco","Espumante","Pisco","Para regalo"])
     }
-    function openMira(){
+    function openSIRA(){
       q("#mira").classList.add("open");q("#mira").setAttribute("aria-hidden","false");
-      if(!messages.children.length){bot("Hola, soy Mira 🍷. Puedo ayudarte a explorar el catálogo de La Viniteca y solo te recomendaré productos que estén realmente cargados aquí.");quick()}
+      if(!messages.children.length){
+        bot("Hola, soy SIRA 🍷. Puedo recomendarte productos reales del catálogo, ayudarte según tu presupuesto y armar tu pedido completo para enviarlo a La Viniteca.");
+        quickButtons(["Ayúdame a elegir","Armar un pedido","Para regalo","Hasta S/ 200"])
+      }
     }
-    function closeMira(){q("#mira").classList.remove("open");q("#mira").setAttribute("aria-hidden","true")}
-    q("#miraLaunch").addEventListener("click",function(){q("#mira").classList.contains("open")?closeMira():openMira()});
-    q("#miraClose").addEventListener("click",closeMira);
-    q("#miraForm").addEventListener("submit",function(e){e.preventDefault();askMira(q("#miraInput").value)});
+    function closeSIRA(){q("#mira").classList.remove("open");q("#mira").setAttribute("aria-hidden","true")}
+    q("#miraLaunch").addEventListener("click",function(){q("#mira").classList.contains("open")?closeSIRA():openSIRA()});
+    q("#miraClose").addEventListener("click",closeSIRA);
+    q("#miraForm").addEventListener("submit",function(e){e.preventDefault();askSira(q("#miraInput").value)});
+    renderOrderDock();
 
     buildChips();buildCountries();initPrice();render();
 
