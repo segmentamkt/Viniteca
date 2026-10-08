@@ -83,8 +83,8 @@ export default async function handler(req, res) {
       const associations = p.associations || {};
       const pf = Array.isArray(associations.product_features) ? associations.product_features : [];
       for (const link of pf) {
-        const fv = featureValues.get(String(link.id || link.id_feature_value || ""));
-        const fid = String(link.id_feature || fv?.featureId || "");
+        const fv = featureValues.get(String(link.id_feature_value || link.id || ""));
+        const fid = String(link.id_feature || link.id || fv?.featureId || "");
         const fname = norm(featureNames.get(fid));
         const value = fv?.value || "";
         if (/(pais|country|origen|procedencia)/.test(fname)) {
