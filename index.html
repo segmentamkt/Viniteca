@@ -48,12 +48,12 @@
     .card:hover .wa{transform:translateY(-1px);box-shadow:0 14px 30px rgba(103,19,34,.28);background:linear-gradient(135deg,#93233a 0%,#6d1324 62%,#520d19 100%)}.disabled{opacity:.42;pointer-events:none}
     .empty{grid-column:1/-1;padding:50px 22px;text-align:center;border:1px dashed rgba(103,19,34,.22);border-radius:26px;background:rgba(255,255,255,.46)}.empty strong{display:block;margin-bottom:8px;font-family:"Marcellus",serif;font-size:1.5rem;font-weight:400}.empty span{display:block;max-width:590px;margin:auto;color:var(--muted);font-size:.86rem;line-height:1.55}
     .backdrop{position:fixed;inset:0;z-index:70;background:rgba(17,8,9,.56);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:.2s}.backdrop.open{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;z-index:71;width:min(620px,100%);max-height:88vh;overflow:auto;transform:translate(-50%,105%);background:var(--paper);border-radius:28px 28px 0 0;box-shadow:0 -20px 60px rgba(0,0,0,.22);transition:.28s}.sheet.open{transform:translate(-50%,0)}.handle{width:46px;height:4px;border-radius:99px;background:#cbbdb6;margin:10px auto 2px}.sheet-content{padding:18px 22px calc(var(--safe-bottom) + 24px)}.close{float:right;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff}.sheet-media{clear:both;aspect-ratio:16/10;border-radius:20px;background:linear-gradient(145deg,#f6efe7,#ece0d3);display:grid;place-items:center;overflow:hidden;margin:10px 0 18px}.sheet-media img{width:100%;height:100%;object-fit:contain;padding:18px}.sheet h3{margin:7px 0 13px;font-family:"Marcellus",serif;font-size:2rem;font-weight:400;line-height:1.05}.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fact{padding:12px;border:1px solid rgba(103,19,34,.08);border-radius:14px;background:#fff}.fact b{display:block;margin-bottom:4px;color:var(--muted);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase}.fact span{font-size:.8rem}.sheet-wa{width:100%;min-height:50px;margin-top:16px;border:0;border-radius:14px;background:var(--wine);color:#fff;font-weight:800}
-    .sira-avatar-overlay{position:fixed;right:18px;bottom:calc(var(--safe-bottom) + 12px);z-index:9999;width:62px;height:62px;border:2px solid rgba(216,199,178,.82);border-radius:50%;overflow:hidden;pointer-events:none;box-shadow:0 16px 42px rgba(103,19,34,.38);background:#4e0d18}
+    .sira-avatar-overlay{position:fixed;right:18px;bottom:calc(var(--safe-bottom) + 12px);z-index:9999;width:62px;height:62px;border:2px solid rgba(216,199,178,.82);border-radius:50%;overflow:hidden;pointer-events:none;box-shadow:0 16px 42px rgba(103,19,34,.38);background:#4e0d18}.sira-online{position:fixed;right:88px;bottom:calc(var(--safe-bottom) + 22px);z-index:9998;min-height:40px;padding:0 13px;border:1px solid rgba(103,19,34,.14);border-radius:999px;background:rgba(255,255,255,.96);color:var(--wine);box-shadow:0 10px 26px rgba(55,16,23,.12);display:flex;align-items:center;gap:7px;font-size:.69rem;font-weight:800}.sira-online:before{content:"↗";font-size:.76rem}
     .sira-avatar-overlay img{width:100%;height:100%;object-fit:cover;display:block}
     .cart-launch{position:fixed;right:18px;bottom:calc(var(--safe-bottom) + 88px);z-index:88;min-width:54px;height:50px;padding:0 14px;border:1px solid rgba(103,19,34,.13);border-radius:16px;background:#fff;color:var(--wine);box-shadow:0 12px 32px rgba(55,16,23,.14);display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800}.cart-launch .cart-count{min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--wine);color:#fff;display:grid;place-items:center;font-size:.66rem}
     .cart-panel{position:fixed;right:16px;bottom:calc(var(--safe-bottom) + 150px);z-index:87;width:min(390px,calc(100% - 32px));max-height:min(620px,calc(100dvh - 190px));overflow:auto;border-radius:24px;background:#fff;box-shadow:0 26px 80px rgba(36,9,14,.25);transform:translateY(16px) scale(.97);opacity:0;pointer-events:none;transition:.2s}.cart-panel.open{transform:none;opacity:1;pointer-events:auto}.cart-head{position:sticky;top:0;z-index:2;padding:15px 16px;background:linear-gradient(135deg,#4b0d17,var(--wine2));color:#fff;display:flex;align-items:center;justify-content:space-between}.cart-head b{font-family:"Marcellus",serif;font-size:1.1rem;font-weight:400}.cart-close{width:34px;height:34px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff}.cart-body{padding:12px}.cart-empty{padding:26px 10px;text-align:center;color:var(--muted);font-size:.78rem}.cart-item{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(103,19,34,.08)}.cart-thumb{width:56px;height:66px;border-radius:12px;background:#f6efe7;overflow:hidden;display:grid;place-items:center}.cart-thumb img{width:100%;height:100%;object-fit:contain;padding:5px}.cart-info{min-width:0}.cart-info b{display:block;font-family:"Marcellus",serif;font-size:.82rem;font-weight:400;line-height:1.2}.cart-info small{display:block;margin-top:4px;color:var(--wine);font-size:.68rem;font-weight:800}.cart-qty{display:flex;align-items:center;gap:5px}.cart-qty button{width:28px;height:28px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--wine);font-weight:800}.cart-qty strong{min-width:18px;text-align:center;font-size:.72rem}.cart-footer{position:sticky;bottom:0;padding:12px 14px 14px;border-top:1px solid rgba(103,19,34,.08);background:#fff}.cart-total{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.cart-total span{font-size:.72rem;color:var(--muted)}.cart-total b{font-family:"Marcellus",serif;color:var(--wine);font-size:1.08rem;font-weight:400}.cart-final{display:grid;grid-template-columns:1fr 1fr;gap:8px}.cart-final button{min-height:44px;border-radius:12px;font-size:.7rem;font-weight:800}.cart-ps{border:0;background:#1d1715;color:var(--cream)}.cart-wa{border:0;background:linear-gradient(135deg,#861d31,#560d1a);color:#fff}
     .add-cart{border:1px solid #1d1715;background:#1d1715;color:var(--cream);box-shadow:0 8px 18px rgba(29,23,21,.14);transition:.2s}.add-cart:hover{transform:translateY(-1px);background:#2b2220}.add-cart:before{content:"＋";margin-right:7px;font-size:.86rem}
-    @media(max-width:900px){.path-wrap{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.head{align-items:start;flex-direction:column}.filter-btn{display:block}.filters{display:none;grid-template-columns:1fr}.filters.open{display:grid}}
+    @media(max-width:900px){.path-wrap{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.head{align-items:start;flex-direction:column}.toolbar{position:static;top:auto}.filter-btn{display:block}.filters{display:none;grid-template-columns:1fr}.filters.open{display:grid}}
     @media(max-width:560px){.hero-inner{width:calc(100% - 36px)}.ig span{display:none}.catalog{padding-top:56px}.wrap{width:calc(100% - 24px)}.grid{gap:10px}.card{border-radius:19px}.body{padding:12px}.card h3{font-size:1rem}.details{font-size:.66rem}.actions{flex-direction:column}.filter-btn{width:48px;padding:0;font-size:0}.filter-btn:before{content:"☷";font-size:1.1rem}.mira-launch{width:60px;height:60px}.mira-launch:after{display:none}.facts{grid-template-columns:1fr}}
   </style>
 </head>
@@ -108,7 +108,7 @@
           <div class="filter-title"><span>Categorías</span><span id="categoryLabel">Todas</span></div>
           <div class="chips" id="chips"></div>
         </div>
-        <div class="filters open" id="filters">
+        <div class="filters" id="filters">
           <div class="filter-card">
             <div class="price-head"><b>Rango de precio</b><span class="price-value" id="priceValue">Todos los precios</span></div>
             <div class="range-wrap">
@@ -138,7 +138,7 @@
     <div class="cart-body" id="cartBody"></div>
     <div class="cart-footer" id="cartFooter"></div>
   </aside>
-  <div class="sira-avatar-overlay" aria-hidden="true"><img src="/assets/sira-avatar.webp" alt=""></div>
+  <a class="sira-online" href="https://viniteca.com.pe/" target="_blank" rel="noopener noreferrer">Comprar online</a><div class="sira-avatar-overlay" aria-hidden="true"><img src="/assets/sira-avatar.webp" alt=""></div>
 
   <script src="catalogo-data.js"></script>
   <script src="/api/prestashop-catalog.js"></script>
@@ -159,16 +159,19 @@
       return ai-bi;
     });
     var categories=["Todos"].concat(rawCategories);
-    var prices=catalog.map(function(p){return Number(p.price)||0}).filter(function(v){return v>0});
-    var absoluteMin=prices.length?Math.floor(Math.min.apply(null,prices)/5)*5:0;
-    var absoluteMax=prices.length?Math.ceil(Math.max.apply(null,prices)/5)*5:1000;
-    if(absoluteMax<=absoluteMin)absoluteMax=absoluteMin+100;
+    var prices=catalog.map(function(p){return Number(p.price)||0}).filter(function(v){return v>0}).sort(function(a,b){return a-b});
+    var realMax=prices.length?prices[prices.length-1]:1000;
+    var p95=prices.length?prices[Math.min(prices.length-1,Math.floor(prices.length*.95))]:1000;
+    var absoluteMin=0;
+    var absoluteMax=Math.ceil(Math.min(realMax,Math.max(500,p95))/50)*50;
+    if(absoluteMax<=absoluteMin)absoluteMax=1000;
+    var hasExpensive=realMax>absoluteMax;
     var state={category:"Todos",search:"",country:"",priceMin:absoluteMin,priceMax:absoluteMax};
     function q(s){return document.querySelector(s)}
     function norm(v){return String(v||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim()}
     function esc(v){return String(v||"").replace(/[&<>'"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]})}
     function out(p){return norm(p.status)==="agotado"}
-    function money(v){var n=Number(v)||0;return n>0?"S/ "+new Intl.NumberFormat("es-PE",{maximumFractionDigits:0}).format(n):"Consultar"}
+    function money(v){var n=Number(v)||0;return n>0?"S/ "+new Intl.NumberFormat("es-PE",{maximumFractionDigits:0}).format(n):"Consultar"} function rangeMoney(v,isMax){var n=Number(v)||0;return "S/ "+new Intl.NumberFormat("es-PE",{maximumFractionDigits:0}).format(n)+(isMax&&hasExpensive&&n===absoluteMax?"+":"")}
     function waText(p){return encodeURIComponent("Hola La Viniteca, vi "+p.name+" en su catálogo y quisiera consultar disponibilidad y recibir más información.")}
     function waUrl(p){return "https://wa.me/"+WA+"?text="+waText(p)}
     function joined(){return Array.prototype.slice.call(arguments).filter(Boolean).join(" · ")}
@@ -196,7 +199,7 @@
       var min=q("#priceMin"),max=q("#priceMax");
       [min,max].forEach(function(el){el.min=absoluteMin;el.max=absoluteMax;el.step=5});
       min.value=state.priceMin;max.value=state.priceMax;
-      q("#priceFloor").textContent=money(absoluteMin);q("#priceCeil").textContent=money(absoluteMax);
+      q("#priceFloor").textContent=rangeMoney(absoluteMin,false);q("#priceCeil").textContent=rangeMoney(absoluteMax,true);
       updatePriceUI();
     }
     function updatePriceUI(){
@@ -205,7 +208,7 @@
       var hi=Math.max(Number(max.value),lo+5);
       lo=Math.max(absoluteMin,lo);hi=Math.min(absoluteMax,hi);
       min.value=lo;max.value=hi;state.priceMin=lo;state.priceMax=hi;
-      q("#priceValue").textContent=money(lo)+" — "+money(hi);
+      q("#priceValue").textContent=rangeMoney(lo,false)+" — "+rangeMoney(hi,true);
       var span=Math.max(1,absoluteMax-absoluteMin);
       var left=((lo-absoluteMin)/span)*100,right=((hi-absoluteMin)/span)*100;
       q("#rangeFill").style.left=left+"%";q("#rangeFill").style.width=Math.max(0,right-left)+"%";
@@ -222,7 +225,7 @@
       return catalog.filter(function(p){
         var hay=norm([p.name,p.category,p.reference,p.winery,p.grape,p.region,p.country,p.vintage].filter(Boolean).join(" "));
         var price=Number(p.price)||0;
-        var priceOk=price===0?state.priceMin===absoluteMin&&state.priceMax===absoluteMax:(price>=state.priceMin&&price<=state.priceMax);
+        var priceOk=price===0?state.priceMin===absoluteMin&&state.priceMax===absoluteMax:(price>=state.priceMin&&(state.priceMax===absoluteMax?true:price<=state.priceMax));
         return (state.category==="Todos"||norm(p.category)===norm(state.category))
           &&(!text||hay.indexOf(text)>-1)
           &&(!state.country||p.country===state.country)
