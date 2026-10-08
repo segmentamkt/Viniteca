@@ -122,7 +122,8 @@ export default async function handler(req, res) {
           ? String(p.id_default_image)
           : "";
         const category = categories.get(String(p.id_category_default))?.name || "Otros";
-        const numericPrice = Number.parseFloat(String(p.price || "0")) || 0;
+        const basePrice = Number.parseFloat(String(p.price || "0")) || 0;
+        const numericPrice = basePrice > 0 ? Math.round((basePrice * 1.18 + Number.EPSILON) * 100) / 100 : 0;
         const productSlug = cleanLang(p.link_rewrite);
         const categoryData = categories.get(String(p.id_category_default));
         const categorySlug = categoryData?.slug || "";
