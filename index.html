@@ -309,13 +309,28 @@
     }
     function sendCartPrestashop(){
       if(!cart.length)return;
-      if(cart.length===1){
-        var item=cart[0],url=item.product.addToCartUrl||item.product.productUrl||"https://viniteca.com.pe/";
-        if(item.qty>1&&url.indexOf("qty=")>-1)url=url.replace(/qty=\d+/,"qty="+item.qty);
-        window.open(url,"_blank");return
+      var needsChoice=cart.find(function(item){return item.product.hasCombinations});
+      if(needsChoice){
+        window.open(needsChoice.product.productUrl||"https://viniteca.com.pe/","_blank");
+        return
       }
-      var first=cart[0].product.productUrl||"https://viniteca.com.pe/";
-      window.open(first,"_blank");
+      var win=window.open("about:blank","vinitecaCheckout");
+      if(!win)return;
+      var urls=cart.map(function(item){
+        var url=item.product.addToCartUrl||item.product.productUrl||"https://viniteca.com.pe/";
+        if(url.indexOf("qty=")>-1)url=url.replace(/qty=\d+/,"qty="+item.qty);
+        return url
+      });
+      var i=0;
+      function next(){
+        if(i<urls.length){
+          win.location.href=urls[i++];
+          setTimeout(next,1500);
+        }else{
+          win.location.href="https://viniteca.com.pe/index.php?controller=cart&action=show";
+        }
+      }
+      next();
     }
     q("#cartLaunch").addEventListener("click",function(){q("#cartPanel").classList.contains("open")?closeCart():openCart()});
     q("#cartClose").addEventListener("click",closeCart);
